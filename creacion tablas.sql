@@ -21,7 +21,7 @@ create table if not exists usuarios(
 	apellido_p varchar(50) not null,
 	apellido_m varchar(50) not null,
 	username varchar(20) not null unique,
-	password varchar(50) not null,
+	password varchar(255) not null,
 	id_contacto int,
 	id_rol int,
 	estatus boolean,
