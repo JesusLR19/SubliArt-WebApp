@@ -29,9 +29,7 @@ create table if not exists usuarios(
 	ON UPDATE CASCADE
 );
 
-
-
-create table if not exists descripcion_pedido(
+create table if not exists descripcion_producto(
 	id_descripcion serial primary key,
 	estilo varchar(50) not null,
 	color varchar(50) not null,
@@ -50,7 +48,7 @@ create table if not exists productos(
 	id_descripcion int,
 	id_categoria int,
 	precio float,
-	constraint fk_id_descripcion foreign key(id_descripcion) references descripcion_pedido(id_descripcion),
+	constraint fk_id_descripcion foreign key(id_descripcion) references descripcion_producto(id_descripcion),
 	constraint fk_id_categoria foreign key(id_categoria) references categoria_producto(id_categoria)
 	ON DELETE RESTRICT 
 	ON UPDATE CASCADE
