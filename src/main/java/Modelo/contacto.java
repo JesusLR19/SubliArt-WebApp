@@ -7,15 +7,15 @@ public class contacto implements Serializable {
 
     private int id_contacto;
     private String calle;
-    private int numero;
+    private String  numero;
     private String colonia;
     private int cp;
     private String referencias;
-    private int num_telefonico;
+    private String num_telefonico;
 
     public contacto(){}
 
-    public contacto(int id_contacto, String calle, int numero, String colonia, int cp, String referencias, int num_telefonico) {
+    public contacto(int id_contacto, String calle, String numero, String colonia, int cp, String referencias, String num_telefonico) {
         this.id_contacto = id_contacto;
         this.calle = calle;
         this.numero = numero;
@@ -41,11 +41,11 @@ public class contacto implements Serializable {
         this.calle = calle;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
@@ -73,11 +73,11 @@ public class contacto implements Serializable {
         this.referencias = referencias;
     }
 
-    public int getNum_telefonico() {
+    public String getNum_telefonico() {
         return num_telefonico;
     }
 
-    public void setNum_telefonico(int num_telefonico) {
+    public void setNum_telefonico(String num_telefonico) {
         this.num_telefonico = num_telefonico;
     }
 }

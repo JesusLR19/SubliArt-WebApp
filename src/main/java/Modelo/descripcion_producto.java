@@ -6,17 +6,17 @@ public class descripcion_producto implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private int id_descripcion;
-    private String estilo;
     private String color;
     private String talla;
+    private String material;
 
     public descripcion_producto(){}
 
-    public descripcion_producto(int id_descripcion, String estilo, String color, String talla) {
+    public descripcion_producto(int id_descripcion, String color, String talla, String material) {
         this.id_descripcion = id_descripcion;
-        this.estilo = estilo;
         this.color = color;
         this.talla = talla;
+        this.material = material;
     }
 
     public int getId_descripcion() {
@@ -25,14 +25,6 @@ public class descripcion_producto implements Serializable {
 
     public void setId_descripcion(int id_descripcion) {
         this.id_descripcion = id_descripcion;
-    }
-
-    public String getEstilo() {
-        return estilo;
-    }
-
-    public void setEstilo(String estilo) {
-        this.estilo = estilo;
     }
 
     public String getColor() {
@@ -49,5 +41,13 @@ public class descripcion_producto implements Serializable {
 
     public void setTalla(String talla) {
         this.talla = talla;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
     }
 }
