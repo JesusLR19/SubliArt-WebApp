@@ -69,6 +69,28 @@ public class usuariosDAO {
             Conexion.close(conn);
         }
     }
+    public void agregarAdmin(usuarios usuario){
+        Connection conn = null;
+        PreparedStatement ps = null;
 
+        try{
+            conn = Conexion.getConnection();
+            //Para ejecutar la siguiente consulta se debe configurar de nuevo la tabla usuarios ya que se especifico que algunos campos no podian quedar en null
+            ps = conn.prepareStatement("INSERT INTO usuarios(username,password,id_rol,estatus)");
+
+            ps.setString(1,usuario.getUsername());
+            ps.setString(2,usuario.getPassword());
+            ps.setInt(3,2); //Colocamos en 1 para que automaticamente quede registrado con rol de Administrador
+            ps.setBoolean(4,true); // tambien colocamos su estatus como activo
+
+            ps.executeUpdate();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+    }
 
 }
