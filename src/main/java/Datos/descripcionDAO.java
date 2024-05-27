@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 public class descripcionDAO {
+    // Los DAO hasta el momento no he visto que mas necesitare para cada uno de ellos por es solo avanzo hasta aqui
     public List<descripcion_producto> listar(){
         Connection conn = null;
         PreparedStatement ps = null;
