@@ -2,9 +2,7 @@ package Datos;
 
 import Modelo.usuarios;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -91,6 +89,29 @@ public class usuariosDAO {
             Conexion.close(ps);
             Conexion.close(conn);
         }
+    }
+
+    public int cambiarUsername(usuarios usuario){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        int registros = 0;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("UPDATE usuarios SET username=?");
+
+            ps.setString(1,usuario.getUsername());
+
+            registros = ps.executeUpdate();
+            if(registros > 0) System.out.println("Tu registro se ha actualizado con exito");
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return registros;
     }
 
 }
