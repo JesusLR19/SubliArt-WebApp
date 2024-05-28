@@ -33,4 +33,42 @@ public class almacenDAO {
         }
         return Almacen;
     }
+    public void agregarProducto(almacen producto){
+        Connection conn = null;
+        PreparedStatement ps = null;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("INSERT INTO almacen(id_producto,cantidad,estatus)");
+
+            ps.setInt(1,producto.getId_producto());
+            ps.setInt(2,producto.getCantidad());
+            ps.setBoolean(3,true);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    public int updateCantidad(almacen producto){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        int registros = 0;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("UPDATE almacen SET cantidad=?");
+
+            ps.setInt(1,producto.getCantidad());
+
+            registros = ps.executeUpdate();
+            if(registros > 0) System.out.println("La cantidad se ha actualizado con exito");
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return registros;
+    }
 }
