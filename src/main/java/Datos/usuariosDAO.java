@@ -5,7 +5,7 @@ import Modelo.usuarios;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+import org.mindrot.jbcrypt.BCrypt;
 public class usuariosDAO {
     public List<usuarios> listar(){
         Connection conn = null;
@@ -45,18 +45,20 @@ public class usuariosDAO {
     public void agregarUsuario(usuarios usuario){
         Connection conn = null;
         PreparedStatement ps = null;
+        //Utilizamos BCrypt para encriptar la contraseña directamente cuando el usuario la ingrese
+        String passwordHash = BCrypt.hashpw(usuario.getPassword(),BCrypt.gensalt());
 
         try{
             conn = Conexion.getConnection();
-            ps = conn.prepareStatement("INSERT INTO usuarios(nombre,apellido_p,apellido_m,username,password,id_rol,estatus)");
+            ps = conn.prepareStatement("INSERT INTO usuarios (nombre,apellido_p,apellido_m,username,password,id_rol,estatus)");
             // En la consulta no incluimos su id_contacto para que este despues de su registro tambien agregue su direccion/informacion de contacto
             ps.setString(1,usuario.getNombre());
             ps.setString(2,usuario.getApellido_p());
             ps.setString(3,usuario.getApellido_m());
-            ps.setString(3,usuario.getUsername());
-            ps.setString(4,usuario.getPassword());
-            ps.setInt(5,2); //Colocamos en 2 para que automaticamente quede registrado con rol de usuario
-            ps.setBoolean(6,true); // tambien colocamos su estatus como activo
+            ps.setString(4,usuario.getUsername());
+            ps.setString(5,passwordHash); //Usamos la variable donde guardamos la contraseña encriptada para guardarla en la BD
+            ps.setInt(6,2); //Colocamos en 2 para que automaticamente quede registrado con rol de usuario
+            ps.setBoolean(7,true); // tambien colocamos su estatus como activo
 
             ps.executeUpdate();
 
@@ -74,7 +76,7 @@ public class usuariosDAO {
         try{
             conn = Conexion.getConnection();
             //Para ejecutar la siguiente consulta se debe configurar de nuevo la tabla usuarios ya que se especifico que algunos campos no podian quedar en null
-            ps = conn.prepareStatement("INSERT INTO usuarios(username,password,id_rol,estatus)");
+            ps = conn.prepareStatement("INSERT INTO usuarios (username,password,id_rol,estatus)");
 
             ps.setString(1,usuario.getUsername());
             ps.setString(2,usuario.getPassword());
@@ -136,6 +138,55 @@ public class usuariosDAO {
         }
         return registros;
     }
+
+    public int cambiarApellidos(usuarios usuario){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        int registros = 0;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("UPDATE usuarios SET apellido_p=?, apellido_m=?");
+
+            ps.setString(1,usuario.getApellido_p());
+            ps.setString(2,usuario.getApellido_m());
+
+            registros = ps.executeUpdate();
+            if(registros > 0) System.out.println("Tus apellidos se ha cambiado correctamente");
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return registros;
+    }
+
+    public int cambiarPassword(usuarios usuario){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        int registros = 0;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("UPDATE usuarios SET password=?");
+
+            String passwordHashed = BCrypt.hashpw(usuario.getPassword(),BCrypt.gensalt());
+            ps.setString(1,passwordHashed);
+
+            registros = ps.executeUpdate();
+            if(registros > 0) System.out.println("Tu contraseña se ha cambiado correctamente");
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return registros;
+    }
+
 
 
 }

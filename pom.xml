@@ -47,6 +47,12 @@
       <artifactId>commons-dbcp2</artifactId>
       <version>2.9.0</version>
     </dependency>
+<!-- Dependencia para hacer hash a la password  -->
+    <dependency>
+      <groupId>org.mindrot</groupId>
+      <artifactId>jbcrypt</artifactId>
+      <version>0.4</version>
+    </dependency>
 
   </dependencies>
   <build>
