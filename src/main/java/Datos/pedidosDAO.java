@@ -57,4 +57,35 @@ public class pedidosDAO {
             Conexion.close(conn);
         }
     }
+    public pedidos identificar(int idPedido) throws Exception{
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        pedidos pedido = null;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("SELECT * FROM pedidos WHERE id_pedido=?");
+            ps.setInt(1,idPedido);
+            rs = ps.executeQuery();
+
+            if (rs.next()){
+                int id_pedido = rs.getInt("id_pedido");
+                int id_usuario = rs.getInt("id_usuario");
+                int total_productos = rs.getInt("total_productos");
+                float total_mxn = rs.getFloat("total_mxn");
+                boolean estatus = rs.getBoolean("estatus");
+
+                pedido = new pedidos(id_pedido,id_usuario,total_productos,total_mxn,estatus);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new Exception("Error al identificar el pedido", e);
+        }finally {
+            Conexion.close(rs);
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return pedido;
+    }
 }
