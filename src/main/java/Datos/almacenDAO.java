@@ -39,11 +39,12 @@ public class almacenDAO {
 
         try {
             conn = Conexion.getConnection();
-            ps = conn.prepareStatement("INSERT INTO almacen(id_producto,cantidad,estatus)");
+            ps = conn.prepareStatement("INSERT INTO almacen(id_producto,cantidad,estatus) VALUES (?,?,?)");
 
             ps.setInt(1,producto.getId_producto());
             ps.setInt(2,producto.getCantidad());
             ps.setBoolean(3,true);
+            ps.executeUpdate();
 
         }catch (Exception e){
             e.printStackTrace();

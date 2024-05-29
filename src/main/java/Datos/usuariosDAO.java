@@ -50,7 +50,7 @@ public class usuariosDAO {
 
         try{
             conn = Conexion.getConnection();
-            ps = conn.prepareStatement("INSERT INTO usuarios (nombre,apellido_p,apellido_m,username,password,id_rol,estatus)");
+            ps = conn.prepareStatement("INSERT INTO usuarios (nombre,apellido_p,apellido_m,username,password,id_rol,estatus) VALUES (?,?,?,?,?,?,?)");
             // En la consulta no incluimos su id_contacto para que este despues de su registro tambien agregue su direccion/informacion de contacto
             ps.setString(1,usuario.getNombre());
             ps.setString(2,usuario.getApellido_p());

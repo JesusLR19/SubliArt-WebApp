@@ -37,4 +37,24 @@ public class pedidosDAO {
         }
         return pedido;
     }
+    public void agregarPedido(pedidos pedido){
+        Connection conn = null;
+        PreparedStatement ps = null;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("INSERT INTO pedidos (id_usuario,total_productos,total_mxn,estatus) VALUES (?,?,?,?)");
+
+            ps.setInt(1,pedido.getId_usuario());
+            ps.setInt(2,pedido.getTotal_productos());
+            ps.setFloat(3,pedido.getTotal_mxn());
+            ps.setBoolean(4,true);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+    }
 }
