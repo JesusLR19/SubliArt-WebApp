@@ -33,6 +33,34 @@ public class almacenDAO {
         }
         return Almacen;
     }
+    public almacen identificar(int idProducto) throws Exception{
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        almacen producto = null;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("SELECT * FROM almacen WHERE id_producto=?");
+            ps.setInt(1,idProducto);
+
+            if (rs.next()){
+                int id_producto = rs.getInt("id_producto");
+                int cantidad = rs.getInt("cantidad");
+                boolean estatus = rs.getBoolean("estatus");
+
+                producto = new almacen(id_producto,cantidad,estatus);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new Exception("Error al identificar el producto", e);
+        }finally {
+            Conexion.close(rs);
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return producto;
+    }
     public void agregarProducto(almacen producto){
         Connection conn = null;
         PreparedStatement ps = null;
