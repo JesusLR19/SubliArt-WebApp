@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 public class productosDAO {
+    //No habia notado que me hacia falta esta clase DAO jaja
     public void addProducto(productos producto){
         Connection conn = null;
         PreparedStatement ps = null;

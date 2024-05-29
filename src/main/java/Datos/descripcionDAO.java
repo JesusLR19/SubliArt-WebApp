@@ -37,4 +37,20 @@ public class descripcionDAO {
         }
         return descripciones;
     }
+    public void agregarDescripcion(descripcion_producto descripcion){
+        Connection conn = null;
+        PreparedStatement ps = null;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("INSERT INTO descripcion_producto (color,talla,material) VALUES (?,?,?)");
+
+            ps.setString(1,descripcion.getColor());
+            ps.setString(2,descripcion.getTalla());
+            ps.setString(3,descripcion.getMaterial());
+            ps.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }
