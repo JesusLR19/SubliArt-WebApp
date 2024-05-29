@@ -39,4 +39,26 @@ public class contactoDAO {
         }
         return contactos;
     }
+    public void agregarContacto(contacto contacto){
+        Connection conn = null;
+        PreparedStatement ps = null;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("INSERT INTO contacto (calle,numero,colonia,cp,referencias,num_telefonico) VALUES (?,?,?,?,?,?)");
+
+            ps.setString(1, contacto.getCalle());
+            ps.setString(2,contacto.getNumero());
+            ps.setString(3, contacto.getColonia());
+            ps.setInt(4,contacto.getCp());
+            ps.setString(5,contacto.getReferencias());
+            ps.setString(6,contacto.getNum_telefonico());
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+    }
 }
