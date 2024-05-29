@@ -71,4 +71,26 @@ public class almacenDAO {
         }
         return registros;
     }
+    public int desactivarProducto(almacen producto){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        int registros = 0;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("UPDATE almacen SET estatus =?");
+
+            ps.setBoolean(1,false);
+
+            registros = ps.executeUpdate();
+            if(registros > 0) System.out.println("El producto se ha desactivado con exito");
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return registros;
+    }
 }
