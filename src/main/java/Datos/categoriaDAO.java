@@ -35,5 +35,23 @@ public class categoriaDAO {
         }
         return categorias;
     }
+    public void agregarCategoria(categoria_producto categoria){
+        Connection conn = null;
+        PreparedStatement ps = null;
 
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("INSERT INTO categoria_producto (nombre_categoria,descripcion) VALUES (?,?)");
+
+            ps.setString(1,categoria.getNombre_categoria());
+            ps.setString(2,categoria.getDescripcion());
+
+            ps.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+    }
 }
