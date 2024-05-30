@@ -109,9 +109,10 @@ public class usuariosDAO {
         }
         return usuario_n;
     }
-    public void agregarUsuario(usuarios usuario){
+    public int agregarUsuario(usuarios usuario){
         Connection conn = null;
         PreparedStatement ps = null;
+        int registros = 0;
         //Utilizamos BCrypt para encriptar la contraseña directamente cuando el usuario la ingrese
         String passwordHash = BCrypt.hashpw(usuario.getPassword(),BCrypt.gensalt());
 
@@ -127,7 +128,8 @@ public class usuariosDAO {
             ps.setInt(6,2); //Colocamos en 2 para que automaticamente quede registrado con rol de usuario
             ps.setBoolean(7,true); // tambien colocamos su estatus como activo
 
-            ps.executeUpdate();
+            registros = ps.executeUpdate();
+
 
         }catch (Exception e){
             e.printStackTrace();
@@ -135,6 +137,7 @@ public class usuariosDAO {
             Conexion.close(ps);
             Conexion.close(conn);
         }
+        return registros;
     }
     public void agregarAdmin(usuarios usuario){
         Connection conn = null;

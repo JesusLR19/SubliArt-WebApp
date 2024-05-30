@@ -24,7 +24,13 @@ public class SvRegistro extends HttpServlet{
 
         try {
             usuario = new usuarios(0,nombre,apellido_p,apellido_m,username,password,0,0,false);
-            usuariosDAO.agregarUsuario(usuario);
+            int verificacion = usuariosDAO.agregarUsuario(usuario);
+            if(verificacion > 0){
+                response.sendRedirect("jsp/autenticado.jsp");
+            }else {
+                response.sendRedirect("jsp/error.jsp");
+            }
+
         }catch (Exception e){
             e.printStackTrace();
             throw new ServletException("Login error", e);
