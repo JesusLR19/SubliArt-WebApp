@@ -11,15 +11,15 @@
     <title>Title</title>
 </head>
 <body>
-<form action="SvLogin" method="post">
+<form action="../SvRegistro" method="post">
     <div>
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="Nombre de usuario" required>
+        <input type="text" id="nombre" name="nombre" required>
     </div>
     <div>
         <label for="apellido_p">Apellidos:</label>
-        <input type="text" id="apellido_p" name="Apellido paterno" required>
-        <input type="text" id="apellido_m" name="Apellido materno" required>
+        <input type="text" id="apellido_p" name="apellido_p" required>
+        <input type="text" id="apellido_m" name="apellido_m" required>
     </div>
     <div>
         <label for = "username">Username</label>
