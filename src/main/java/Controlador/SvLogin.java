@@ -22,8 +22,6 @@ public class SvLogin extends HttpServlet {
         String password = request.getParameter("password");
 
         try {
-            System.out.println(username);
-            System.out.println(password);
             boolean verificado = usuariosDAO.verificarUsuario(username, password);
             if (usuariosDAO.verificarUsuario(username, password)) {
                 HttpSession session = request.getSession();
