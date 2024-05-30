@@ -14,10 +14,18 @@
   <div align="center">
     <h1>User Login</h1>
   </div>
-  <form action="<%= request.getContextPath()%>/login" method="post" class="login">
-    <input type="text" placeholder="Nombre de usuario" name="username">
-    <input type="password" placeholder="Contraseña" name="password">
-    <button type="submit">Iniciar sesion</button>
+  <form action="<%= request.getContextPath()%>/Login" method="post">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+      <button type="submit">Login</button>
+    </div>
   </form>
 </body>
 </html>
