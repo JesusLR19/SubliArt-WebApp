@@ -14,7 +14,7 @@
   <div align="center">
     <h1>User Login</h1>
   </div>
-  <form action="<%= request.getContextPath()%>/Login" method="post">
+  <form action="../SvLogin" method="post">
     <div>
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
@@ -24,8 +24,9 @@
       <input type="password" id="password" name="password" required>
     </div>
     <div>
-      <button type="submit">Login</button>
+      <button type="submit">Iniciar sesion</button>
     </div>
+    <li><a href="registro.jsp">Quiero registrarme</a></li>
   </form>
 </body>
 </html>

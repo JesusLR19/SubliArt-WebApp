@@ -268,10 +268,12 @@ public class usuariosDAO {
 
             if (rs.next()) {
                 String hashedPassword = rs.getString("password");
+                autenticado = BCrypt.checkpw(password, hashedPassword);
                 // Aqui verificamos si la contraseña que ingresa el usuario coincide con la que tenemos en la bd con el hash
-                if (BCrypt.checkpw(password, hashedPassword)) {
-                    autenticado = true;
+                if (autenticado) {
                     System.out.println("Acceso permitido");
+                }else {
+                    System.out.println("Contraseña incorrecta");
                 }
             }
 

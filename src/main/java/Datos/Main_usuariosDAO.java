@@ -9,7 +9,7 @@ public class Main_usuariosDAO {
         usuarioDAO.agregarUsuario(usu);*/
 
         String username = "ichuchex";
-        String password = "123";
+        String password = "1233";
         usuarioDAO.verificarUsuario(username,password);
 
 

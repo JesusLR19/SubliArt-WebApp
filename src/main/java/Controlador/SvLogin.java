@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import Datos.usuariosDAO;
 
-@WebServlet("/Login")
+@WebServlet(name ="SvLogin" , value = "/SvLogin")
 public class SvLogin extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private usuariosDAO usuariosDAO;
@@ -22,14 +22,16 @@ public class SvLogin extends HttpServlet {
         String password = request.getParameter("password");
 
         try {
+            System.out.println(username);
+            System.out.println(password);
             boolean verificado = usuariosDAO.verificarUsuario(username, password);
             if (usuariosDAO.verificarUsuario(username, password)) {
                 HttpSession session = request.getSession();
                 session.setAttribute("username", username);
-                response.sendRedirect("./index.jsp");
+                response.sendRedirect("jsp/autenticado.jsp");
             } else {
                 request.setAttribute("errorMessage", "Username o contraseña incorrectos");
-                request.getRequestDispatcher("./index.jsp").forward(request, response);
+                request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
             }
         } catch (Exception e) {
             e.printStackTrace();
