@@ -1,5 +1,7 @@
 package Datos;
 import Modelo.productos;
+import jdk.vm.ci.meta.SpeculationLog;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,5 +26,36 @@ public class productosDAO {
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+    public productos identificar(String nombreProducto) throws Exception{
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        productos producto = null;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("SELECT * FROM productos WHERE nombre_producto =?");
+            ps.setString(1,nombreProducto);
+
+            if (rs.next()){
+                int id_producto = rs.getInt("id_producto");
+                String nombre_producto = rs.getString("nombre_producto");
+                int id_descripcion = rs.getInt("id_descripcion");
+                int id_categoria = rs.getInt("id_categoria");
+                Float precio = rs.getFloat("precio");
+
+                producto = new productos(id_producto,nombre_producto,id_descripcion,id_categoria,precio);
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new Exception("Error al identificar el producto",e);
+        }finally {
+            Conexion.close(rs);
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return producto;
     }
 }
