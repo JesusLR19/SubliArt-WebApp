@@ -254,6 +254,38 @@ public class usuariosDAO {
         return registros;
     }
 
+    public boolean verificarUsuario(String username, String password) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        boolean autenticado = false;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("SELECT password FROM usuarios WHERE username = ?");
+            ps.setString(1, username);
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                String hashedPassword = rs.getString("password");
+                // Aqui verificamos si la contraseña que ingresa el usuario coincide con la que tenemos en la bd con el hash
+                if (BCrypt.checkpw(password, hashedPassword)) {
+                    autenticado = true;
+                    System.out.println("Acceso permitido");
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            Conexion.close(rs);
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+
+        return autenticado;
+    }
+
 
 
 }

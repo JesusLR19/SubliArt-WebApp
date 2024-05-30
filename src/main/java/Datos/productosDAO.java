@@ -1,7 +1,5 @@
 package Datos;
 import Modelo.productos;
-import jdk.vm.ci.meta.SpeculationLog;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
