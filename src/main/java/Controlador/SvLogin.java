@@ -28,8 +28,8 @@ public class SvLogin extends HttpServlet {
                 session.setAttribute("username", username);
                 response.sendRedirect("jsp/autenticado.jsp");
             } else {
+                response.sendRedirect("jsp/login.jsp");
                 request.setAttribute("errorMessage", "Username o contraseña incorrectos");
-                request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
             }
         } catch (Exception e) {
             e.printStackTrace();

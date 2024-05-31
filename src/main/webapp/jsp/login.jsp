@@ -9,8 +9,15 @@
 <html>
 <head>
     <title>Login</title>
+  <link href="../css/styles.css" rel="stylesheet" type="text/css">
+  </script>
 </head>
 <body>
+<nav class="navbar">
+  <div class="navbar-container">
+    <a class="navbar-brand" href="../index.jsp">Inicio</a>
+  </div>
+</nav>
   <div align="center">
     <h1>User Login</h1>
   </div>
@@ -26,7 +33,15 @@
     <div>
       <button type="submit">Iniciar sesion</button>
     </div>
-    <li><a href="registro.jsp">Quiero registrarme</a></li>
+    <a href="registro.jsp">Quiero registrarme</a>
   </form>
+  <%
+    String errorMessage = (String) request.getAttribute("errorMessage");
+    if (errorMessage != null) {
+  %>
+  <div style="color: red;"><%= errorMessage %></div>
+  <%
+    }
+  %>
 </body>
 </html>
