@@ -143,15 +143,18 @@ public class usuariosDAO {
         Connection conn = null;
         PreparedStatement ps = null;
 
+        String passwordHash = BCrypt.hashpw(usuario.getPassword(),BCrypt.gensalt());
         try{
             conn = Conexion.getConnection();
-            //Para ejecutar la siguiente consulta se debe configurar de nuevo la tabla usuarios ya que se especifico que algunos campos no podian quedar en null
-            ps = conn.prepareStatement("INSERT INTO usuarios (username,password,id_rol,estatus)");
-
-            ps.setString(1,usuario.getUsername());
-            ps.setString(2,usuario.getPassword());
-            ps.setInt(3,2); //Colocamos en 1 para que automaticamente quede registrado con rol de Administrador
-            ps.setBoolean(4,true); // tambien colocamos su estatus como activo
+            ps = conn.prepareStatement("INSERT INTO usuarios (nombre,apellido_p,apellido_m,username,password,id_rol,estatus) VALUES (?,?,?,?,?,?,?)");
+            // En la consulta no incluimos su id_contacto para que este despues de su registro tambien agregue su direccion/informacion de contacto
+            ps.setString(1,usuario.getNombre());
+            ps.setString(2,usuario.getApellido_p());
+            ps.setString(3,usuario.getApellido_m());
+            ps.setString(4,usuario.getUsername());
+            ps.setString(5,passwordHash); //Usamos la variable donde guardamos la contraseña encriptada para guardarla en la BD
+            ps.setInt(6,1); //Colocamos en 2 para que automaticamente quede registrado con rol de Administrador
+            ps.setBoolean(7,true); // tambien colocamos su estatus como activo
 
             ps.executeUpdate();
 
@@ -289,6 +292,29 @@ public class usuariosDAO {
         }
 
         return autenticado;
+    }
+    public int getRol(String username){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        int rol = 0;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("SELECT rol FROM usuarios WHERE username =?");
+            rs = ps.executeQuery();
+
+            if(rs.next()){
+                rol = rs.getInt("rol");
+
+                if(rol > 1){
+                    System.out.println("Rol obtenido con exito");
+                }
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return rol;
     }
 
 

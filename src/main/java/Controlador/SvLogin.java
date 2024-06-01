@@ -22,11 +22,21 @@ public class SvLogin extends HttpServlet {
         String password = request.getParameter("password");
 
         try {
+            int rol = usuariosDAO.getRol(username);
             boolean verificado = usuariosDAO.verificarUsuario(username, password);
-            if (usuariosDAO.verificarUsuario(username, password)) {
+            if (usuariosDAO.verificarUsuario(username, password)){
+
                 HttpSession session = request.getSession();
                 session.setAttribute("username", username);
-                response.sendRedirect("jsp/autenticado.jsp");
+
+                switch (rol){
+                    case 1:
+                        response.sendRedirect("jsp/autenticado.jsp");
+                        break;
+                    case 2:
+                        response.sendRedirect("jsp/login.jsp");
+                        break;
+                }
             } else {
                 response.sendRedirect("jsp/login.jsp");
                 request.setAttribute("errorMessage", "Username o contraseña incorrectos");
