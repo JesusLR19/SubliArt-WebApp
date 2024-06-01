@@ -22,7 +22,7 @@
                     String username = (String) sessionActive.getAttribute("username");
             %>
             <a class="nav-link" href="#">Bienvenido <%= username %> </a>
-            <a class="nav-link" href="../SvLogout">Cerrar sesión</a>
+            <a class="nav-link" href="./SvLogout">Cerrar sesión</a>
             <% } else { %>
             <a class="nav-link" href="jsp/login.jsp">Login</a>
             <% } %>

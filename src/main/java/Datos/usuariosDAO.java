@@ -309,7 +309,7 @@ public class usuariosDAO {
 
                 id_rol = rs.getInt("id_rol");
 
-                if(id_rol > 1){
+                if(id_rol > 0){
                     System.out.println("Rol obtenido con exito");
                 }else{
                     System.out.println("Rol no encontrado");
