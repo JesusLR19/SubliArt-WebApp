@@ -30,7 +30,7 @@ public class SvLogin extends HttpServlet {
                 switch (rol){
                     case 1:
                         session.setAttribute("username", username);
-                        response.sendRedirect("./index.jsp");
+                        response.sendRedirect("jsp-admin/inicio-admin.jsp");
                         break;
                     case 2:
                         session.setAttribute("username", username);
