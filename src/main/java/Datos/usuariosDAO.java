@@ -302,10 +302,12 @@ public class usuariosDAO {
         try {
             conn = Conexion.getConnection();
             ps = conn.prepareStatement("SELECT id_rol FROM usuarios WHERE username =?");
+            ps.setString(1, username);
             rs = ps.executeQuery();
 
             if(rs.next()){
-                id_rol = rs.getInt("rol");
+
+                id_rol = rs.getInt("id_rol");
 
                 if(id_rol > 1){
                     System.out.println("Rol obtenido con exito");
