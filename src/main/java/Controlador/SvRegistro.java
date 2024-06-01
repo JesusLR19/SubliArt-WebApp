@@ -33,7 +33,7 @@ public class SvRegistro extends HttpServlet{
 
         }catch (Exception e){
             e.printStackTrace();
-            throw new ServletException("Login error", e);
+            throw new ServletException("Error en el registro", e);
         }
     }
 
