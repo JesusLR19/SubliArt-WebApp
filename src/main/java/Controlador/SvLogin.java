@@ -33,6 +33,8 @@ public class SvLogin extends HttpServlet {
 
                 } else if (rol == 2) {
                     session.setAttribute("username", username);
+                    //request.setAttribute("errorMessage", "Username o contraseña incorrectos");
+                    //request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
                     response.sendRedirect("jsp/error.jsp");
                 }
             }

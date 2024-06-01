@@ -16,8 +16,18 @@
             <a class="nav-link" href="#">Contacto</a>
         </div>
         <div class="navbar-login">
-            <a class="nav-link" href="jsp/login.jsp">Login/Registro</a>
+            <%
+                HttpSession sessionActive = request.getSession(false);
+                if (sessionActive != null && sessionActive.getAttribute("username") != null) {
+                    String username = (String) sessionActive.getAttribute("username");
+            %>
+            <a class="nav-link" href="#">Bienvenido <%= username %> </a>
+            <a class="nav-link" href="../SvLogout">Cerrar sesión</a>
+            <% } else { %>
+            <a class="nav-link" href="jsp/login.jsp">Login</a>
+            <% } %>
         </div>
+
     </div>
 </nav>
 
