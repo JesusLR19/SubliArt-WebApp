@@ -297,24 +297,26 @@ public class usuariosDAO {
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
-        int rol = 0;
+        int id_rol = 0;
 
         try {
             conn = Conexion.getConnection();
-            ps = conn.prepareStatement("SELECT rol FROM usuarios WHERE username =?");
+            ps = conn.prepareStatement("SELECT id_rol FROM usuarios WHERE username =?");
             rs = ps.executeQuery();
 
             if(rs.next()){
-                rol = rs.getInt("rol");
+                id_rol = rs.getInt("rol");
 
-                if(rol > 1){
+                if(id_rol > 1){
                     System.out.println("Rol obtenido con exito");
+                }else{
+                    System.out.println("Rol no encontrado");
                 }
             }
         }catch (Exception e){
             e.printStackTrace();
         }
-        return rol;
+        return id_rol;
     }
 
 
