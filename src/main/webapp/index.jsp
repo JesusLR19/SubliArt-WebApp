@@ -1,3 +1,4 @@
+<%@ page import="Datos.usuariosDAO" %>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <html>
 <head>
@@ -17,10 +18,18 @@
         </div>
         <div class="navbar-login">
             <%
+            %>
+            <%
                 HttpSession sessionActive = request.getSession(false);
                 if (sessionActive != null && sessionActive.getAttribute("username") != null) {
                     String username = (String) sessionActive.getAttribute("username");
             %>
+            <% usuariosDAO usuarioDAO = new usuariosDAO();
+                int rol = usuarioDAO.getRol(username);
+                if (rol == 1) {
+            %>
+            <a class="nav-link" href="./jsp-admin/inicio-admin.jsp">Administrar</a>
+            <% }%>
             <a class="nav-link" href="#">Bienvenido <%= username %> </a>
             <a class="nav-link" href="./SvLogout">Cerrar sesión</a>
             <% } else { %>
