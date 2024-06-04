@@ -10,38 +10,49 @@
 <head>
     <title>Login</title>
   <link href="../css/styles.css" rel="stylesheet" type="text/css">
-  </script>
+  <link rel ="stylesheet" href = "../css/bootstrap.min.css">
 </head>
 <body>
-<nav class="navbar">
-  <div class="navbar-container">
-    <a class="navbar-brand" href="../index.jsp">Inicio</a>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a class="navbar-brand" href="../index.jsp">Inicio</a>
+    </div>
+  </nav>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        1 of 2
+      </div>
+      <div class="col">
+        2 of 2
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        1 of 3
+      </div>
+      <div class="col">
+        <form action="../SvLogin" method="post">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" aria-describedby="username" name="username" required>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+        </form>
+      </div>
+      <div class="col">
+        3 of 3
+      </div>
+    </div>
   </div>
-</nav>
-  <div align="center">
-    <h1>User Login</h1>
-  </div>
-  <form action="../SvLogin" method="post">
-    <div>
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
-    </div>
-    <div>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-    </div>
-    <div>
-      <button type="submit">Iniciar sesion</button>
-    </div>
-    <a href="registro.jsp">Quiero registrarme</a>
-  </form>
-  <%
-    String errorMessage = (String) request.getAttribute("errorMessage");
-    if (errorMessage != null) {
-  %>
-  <div style="color: red;"><%= errorMessage %></div>
-  <%
-    }
-  %>
+
+
+
+
 </body>
 </html>

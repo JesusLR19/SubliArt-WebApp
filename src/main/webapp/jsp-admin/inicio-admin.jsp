@@ -11,98 +11,40 @@
   <title>Inicio - Subli-Art</title>
   <link href="../css/styles.css" rel="stylesheet" type="text/css">
   <link href="../css/dropdown-menu.css" rel="stylesheet" type="text/css">
+  <link rel ="stylesheet" href = "../css/bootstrap.min.css">
 </head>
 <body>
-<!-- Barra de navegación -->
-<nav class="nav">
 
-  <div class="nav__container">
-
-    <h1 class="nav__title">SubliArt</h1>
-
-    <a href="#menu" class="nav__menu">
-      <img src="../assets/menu.svg" class="nav__icon">
-    </a>
-
-    <a href="#" class="nav__menu nav__menu--second">
-      <img src="../assets/close.svg" class="nav__icon ">
-    </a>
-
-    <ul class="dropdown" id="menu">
-
-      <li class="dropdown__list">
-        <a href="../index.jsp" class="dropdown__link">
-          <img src="../assets/house.svg" class="dropdown__icon">
-          <span class="dropdown__span">Inicio</span>
-        </a>
-      </li>
-
-      <li class="dropdown__list">
-        <a href="#" class="dropdown__link">
-          <img src="../assets/projects.svg" class="dropdown__icon">
-          <span class="dropdown__span">Projects</span>
-          <img src="../assets/down.svg" class="dropdown__arrow">
-
-          <input type="checkbox" class="dropdown__check">
-        </a>
-
-        <div class="dropdown__content">
-
-          <ul class="dropdown__sub">
-
-            <li class="dropdown__li">
-              <a href="#" class="dropdown__anchor">Project 1</a>
-            </li>
-            <li class="dropdown__li">
-              <a href="#" class="dropdown__anchor">Project 2</a>
-            </li>
-            <li class="dropdown__li">
-              <a href="#" class="dropdown__anchor">Project 3</a>
-            </li>
-
-          </ul>
-
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
-      </li>
-
-      <li class="dropdown__list">
-        <a href="#" class="dropdown__link">
-          <img src="../assets/email.svg" class="dropdown__icon">
-          <span class="dropdown__span">Contacto</span>
-          <img src="../assets/down.svg" class="dropdown__arrow">
-
-          <input type="checkbox" class="dropdown__check">
-        </a>
-
-        <div class="dropdown__content">
-
-          <ul class="dropdown__sub">
-
-            <li class="dropdown__li">
-              <a href="#" class="dropdown__anchor">Contact 1</a>
-            </li>
-            <li class="dropdown__li">
-              <a href="#" class="dropdown__anchor">Contact 2</a>
-            </li>
-
-
-          </ul>
-
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
         </div>
-      </li>
-
-      <li class="dropdown__list">
-        <a href="#" class="dropdown__link">
-          <img src="../assets/help.svg" class="dropdown__icon">
-          <span class="dropdown__span">Ayuda</span>
-        </a>
-      </li>
-
-    </ul>
-
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <div class="col">
+      Column
+    </div>
   </div>
+</div>
 
-</nav>
+
 
 
 </body>
