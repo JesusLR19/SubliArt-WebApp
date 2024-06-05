@@ -75,7 +75,7 @@ public class usuariosDAO {
         }
         return usuario;
     }
-    public usuarios identificarNombre(String nombre_usuario) throws Exception{
+    public usuarios identificarNombre(String nombre_usuario) throws Exception {
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -83,26 +83,28 @@ public class usuariosDAO {
 
         try{
             conn = Conexion.getConnection();
-            ps = conn.prepareStatement("SELECT * FROM usuarios WHERE nombre=?");
-            ps.setString(1,nombre_usuario);
+            ps = conn.prepareStatement("SELECT * FROM usuarios WHERE username = ?");
+            ps.setString(1, nombre_usuario);
 
-            if (rs.next()){
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
                 int id_usuario = rs.getInt("id_usuario");
                 String nombre = rs.getString("nombre");
                 String apellido_p = rs.getString("apellido_p");
                 String apellido_m = rs.getString("apellido_m");
                 String username = rs.getString("username");
-                String password =  rs.getString("password");
+                String password = rs.getString("password");
                 int id_contacto = rs.getInt("id_contacto");
                 int id_rol = rs.getInt("id_rol");
                 boolean estatus = rs.getBoolean("estatus");
 
                 usuario_n = new usuarios(id_usuario,nombre,apellido_p,apellido_m,username,password,id_contacto,id_rol,estatus);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             throw new Exception("Error al identificar al usuario", e);
-        }finally {
+        } finally {
             Conexion.close(rs);
             Conexion.close(ps);
             Conexion.close(conn);

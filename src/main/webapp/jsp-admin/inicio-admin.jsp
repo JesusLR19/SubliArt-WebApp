@@ -1,3 +1,5 @@
+<%@ page import="Datos.usuariosDAO" %>
+<%@ page import="Modelo.usuarios" %>
 <%--
   Created by IntelliJ IDEA.
   User: Dell Latitude
@@ -10,6 +12,7 @@
 <head>
   <title>Inicio - Subli-Art</title>
   <link href="../css/styles.css" rel="stylesheet" type="text/css">
+  <link rel ="stylesheet" href = "./css/bootstrap.min.css">
 </head>
 
 <body>
@@ -23,20 +26,49 @@
   <div class="container">
     <ul class="menu-vertical">
       <li><a href="#">Lista Usuarios</a> </li>
-      <li><a href="#">Identificar usuario</a></li>
+      <li><a href="identificar-usuario.jsp">Identificar usuario</a></li>
       <li><a href="#">Cambiar contraseña</a> </li>
       <li><a href="#">Añadir producto</a> </li>
       <li><a href="#">Eliminar producto</a> </li>
       <li><a href="#">Editar producto</a> </li>
       <li><a href="#">Agregar administrador</a></li>
     </ul>
+    <%
+      HttpSession sessionActive = request.getSession(false);
+      String username = (String) sessionActive.getAttribute("username");
+      usuariosDAO usuarioDAO = new usuariosDAO();
+      usuarios usuario;
 
-    <form action="../SvEliminarUs" method="post" class="element element-6">
-      <label for="id_usuarioN">Usuario nombre: </label>
-      <input type="text" id="id_usuarioN" name="id_usuarioN" placeholder="Un nombre de usuario.." required>
+      usuario = usuarioDAO.identificarNombre(username);
+    %>
+
+
+    <div class = "element-6">
+      <label for="id_usuario">id_usuario: </label>
+      <input type="number" name="id_usuario" id="id_usuario" value="<%=usuario.getId_usuario()%>" required readonly>
       <br>
-      <input type="submit" value="Eliminar">
-    </form>
+      <label for="id_usuarioN">Username: </label>
+      <input type="text" name="id_usuarioN" id="id_usuarioN" value="<%= usuario.getUsername()%>" required readonly>
+      <br>
+      <label for="nombre">Nombre: </label>
+      <input type="text" name="nombre" id="nombre" value="<%= usuario.getNombre()%>" required readonly>
+      <br>
+      <label for="apellido_p">Apellido Paterno: </label>
+      <input type="text" name="apellido_p" id="apellido_p" value="<%= usuario.getApellido_p()%>" required readonly>
+
+      <label for="apellido_m">Apellido Materno: </label>
+      <input type="text" name="apellido_m" id="apellido_m" value="<%= usuario.getApellido_p()%>" required readonly>
+      <br>
+      <label for="id_contacto">id_contacto: </label>
+      <input type="text" name="id_contacto" id="id_contacto" value="<%= usuario.getId_contacto()%>" required readonly>
+      <br>
+      <label for="id_rol">id_rol: </label>
+      <input type="text" name="id_rol" id="id_rol" value="<%= usuario.getId_rol()%>" required readonly>
+      <br>
+      <label for="estatus">Estatus: </label>
+      <input type="text" name="estatus" id="estatus" value="<%= usuario.isEstatus()%>" required readonly>
+      <br>
+    </div>
 
   </div>
 

@@ -65,6 +65,17 @@ body {
     grid-template-columns:repeat(6,1fr) ;
     grid-template-rows: 100px 10em 1fr;
 }
+.container-form{
+    margin: 20px auto;
+    width: 90%;
+    height : 400px;
+    max-width: 1600px;
+    outline: 4px solid;
+
+    display: grid;
+    grid-template-columns:repeat(6,1fr) ;
+    grid-template-rows: 100px 10em 1fr;
+}
 .element{
     color:#ffff;
     text-align: center;
@@ -92,11 +103,13 @@ body {
 }
 
 .element-5{
-    background-color:seagreen ;
+    background-color: #cbcbcb;
+    grid-column: 5/7;
+    grid-row: 1/4;
 }
 .element-6{
     background-color: #cbcbcb;
-    grid-column: 2/7;
+    grid-column: 2/4;
     grid-row: 1/4;
 }
 
