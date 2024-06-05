@@ -80,9 +80,10 @@ body {
     font-weight: bold;
 }
 .element-1{
-    background-color:seagreen ;
+    background-image: url("/img/porsche png.png") ;
     grid-column: 1/5;
     grid-row: 1/2;
+
 }
 .element-2{
     background-color: deeppink;
@@ -110,4 +111,41 @@ body {
     grid-row: 1/4;
 }
 
+.posts{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.posts h1{
+    margin: 25px 10px 15px;
+}
+.post{
+    width: 46%;
+    background: #f1f1f1;
+    overflow: hidden;
+    margin: 20px 10px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 
+    float: left;
+}
+.post img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.post h2{
+    padding: 10px;
+}
+.post p{
+    margin-bottom: 10px;
+    text-align: justify;
+    padding: 10px;
+    line-height: 1.4;
+}
+@media only screen and (max-width: 767px) {
+    .post{
+        width: 96%;
+        margin: 2%;
+    }
+}

@@ -42,14 +42,32 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class = "element element-1">#1</div>
+    <div class="posts">
+        <h1> </h1>
+        <div class="post">
+            <img src="./img/dtf.jpg" alt="Foto de Cuzco" width="500">
+            <h2>Tecnologia DTF</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error iste sint amet aliquid, debitis vitae, praesentium adipisci laborum inventore facilis ut ducimus voluptate blanditiis non neque quod dolorem quisquam quo.</p>
+        </div>
 
-        <div class = "element element-2">#2</div>
+        <div class="post">
+            <img src="./img/serigrafia.jpg" alt="Foto de Cuzco" width="500">
+            <h2>Serigrafia</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error iste sint amet aliquid, debitis vitae, praesentium adipisci laborum inventore facilis ut ducimus voluptate blanditiis non neque quod dolorem quisquam quo.</p>
+        </div>
 
-        <div class = "element element-3">#3</div>
+        <div class="post">
+            <img src="./img/sublimacion.jpg" alt="Foto de Cuzco" width="500">
+            <h2>Sublimacion</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error iste sint amet aliquid, debitis vitae, praesentium adipisci laborum inventore facilis ut ducimus voluptate blanditiis non neque quod dolorem quisquam quo.</p>
+        </div>
 
-        <div class = "element element-4">#4</div>
+        <div class="post">
+            <img src="./img/cuzco.jpg" alt="Foto de Cuzco" width="500">
+            <h2>Titulo del Post</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error iste sint amet aliquid, debitis vitae, praesentium adipisci laborum inventore facilis ut ducimus voluptate blanditiis non neque quod dolorem quisquam quo.</p>
+        </div>
+
     </div>
 
 
