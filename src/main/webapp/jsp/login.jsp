@@ -10,46 +10,23 @@
 <head>
     <title>Login</title>
   <link href="../css/styles.css" rel="stylesheet" type="text/css">
-  <link rel ="stylesheet" href = "../css/bootstrap.min.css">
+  <link href="../css/estilos-registro.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
   <nav class="navbar">
     <div class="navbar-container">
       <a class="navbar-brand" href="../index.jsp">Inicio</a>
     </div>
   </nav>
-  <div class="container text-center">
-    <div class="row">
-      <div class="col">
-        1 of 2
-      </div>
-      <div class="col">
-        2 of 2
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        1 of 3
-      </div>
-      <div class="col">
-        <form action="../SvLogin" method="post">
-          <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username" aria-describedby="username" name="username" required>
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" name="password" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Iniciar sesion</button>
-        </form>
-      </div>
-      <div class="col">
-        3 of 3
-      </div>
-    </div>
-  </div>
+
+  <form action = "../SvLogin" method="post" class="form-register">
+    <h4>Inicio de sesion</h4>
+    <input class ="controls" type="text" name="username" id="username" placeholder="Ingrese un nombre de usuario" required>
+    <input class ="controls" type="password" name="password" id="password" placeholder="Ingrese su contraseña" required>
+    <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a> </p>
+    <input class ="botons" type="submit" value ="Iniciar sesion">
+    <p><a href="./registro.jsp">Aun no tengo cuenta</a></p>
+  </form>
 
 
 

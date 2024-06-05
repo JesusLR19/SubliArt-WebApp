@@ -8,30 +8,29 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Registro</title>
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../css/estilos-registro.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form action="../SvRegistro" method="post">
-    <div>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-    </div>
-    <div>
-        <label for="apellido_p">Apellidos:</label>
-        <input type="text" id="apellido_p" name="apellido_p" required>
-        <input type="text" id="apellido_m" name="apellido_m" required>
-    </div>
-    <div>
-        <label for = "username">Username</label>
-        <input type="text" id="username" name="username" required>
-    </div>
-    <div>
-        <label for = "password">Contraseña</label>
-        <input type="password" id="password" name="password" required>
-    </div>
-    <div>
-        <button type="submit">Registrarme</button>
-    </div>
-</form>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a class="navbar-brand" href="../index.jsp">Inicio</a>
+        </div>
+    </nav>
+
+    <form action = "../SvRegistro" method="post" class="form-register">
+        <h4>Registro</h4>
+        <input class ="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+        <input class ="controls" type="text" name="apellido_p" id="apellido_p" placeholder="Ingrese su apellido paterno" required>
+        <input class ="controls" type="text" name="apellido_m" id="apellido_m" placeholder="Ingrese su apellido materno" required>
+        <input class ="controls" type="text" name="username" id="username" placeholder="Ingrese un nombre de usuario" required>
+        <input class ="controls" type="text" name="password" id="password" placeholder="Ingrese su contraseña" required>
+        <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a> </p>
+        <input class ="botons" type="submit" value ="Registrar">
+        <p><a href="./login.jsp">Ya tengo cuenta</a></p>
+
+    </form>
+
 </body>
 </html>

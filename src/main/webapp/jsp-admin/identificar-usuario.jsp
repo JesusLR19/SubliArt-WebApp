@@ -12,6 +12,7 @@
 <head>
     <title>Inicio - Subli-Art</title>
     <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../css/estilos-registro.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>

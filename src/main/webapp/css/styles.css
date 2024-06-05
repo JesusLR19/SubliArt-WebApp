@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image: url('/img/fondo.png');
 }
 
 /* Estilos de la barra de navegación */
@@ -50,9 +50,6 @@ body {
     font-weight: 900;
     text-decoration: none;
 }
-
-
-
 
 .container{
     margin: 20px auto;
