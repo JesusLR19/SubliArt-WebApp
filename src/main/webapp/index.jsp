@@ -46,26 +46,26 @@
         <h1> </h1>
         <div class="post">
             <img src="./img/dtf.jpg" alt="Foto de Cuzco" width="500">
-            <h2>Tecnologia DTF</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error iste sint amet aliquid, debitis vitae, praesentium adipisci laborum inventore facilis ut ducimus voluptate blanditiis non neque quod dolorem quisquam quo.</p>
+            <h2>DTF Textil</h2>
+            <p>El DTF textil revoluciona la personalización textil. Imprimiendo primero en una película especial, se transfiere el diseño a la prenda mediante calor y presión. Esta técnica ofrece gran versatilidad, permitiendo estampar en telas de cualquier color y material.</p>
         </div>
 
         <div class="post">
             <img src="./img/serigrafia.jpg" alt="Foto de Cuzco" width="500">
             <h2>Serigrafia</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error iste sint amet aliquid, debitis vitae, praesentium adipisci laborum inventore facilis ut ducimus voluptate blanditiis non neque quod dolorem quisquam quo.</p>
+            <p>La serigrafía, una técnica tradicional con un toque moderno, utiliza mallas y tintas para crear estampados duraderos y vibrantes. Ideal para diseños sencillos o con pocos colores, la serigrafía ofrece un acabado artesanal y auténtico que encanta a muchos.</p>
         </div>
 
         <div class="post">
             <img src="./img/sublimacion.jpg" alt="Foto de Cuzco" width="500">
             <h2>Sublimacion</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error iste sint amet aliquid, debitis vitae, praesentium adipisci laborum inventore facilis ut ducimus voluptate blanditiis non neque quod dolorem quisquam quo.</p>
+            <p>La sublimación utiliza calor para transferir tintas en estado gaseoso a la tela, logrando una integración total del diseño en las fibras. Esta técnica destaca por sus colores vibrantes y alta definición, siendo ideal para diseños complejos y fotografías.</p>
         </div>
 
         <div class="post">
-            <img src="./img/cuzco.jpg" alt="Foto de Cuzco" width="500">
-            <h2>Titulo del Post</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error iste sint amet aliquid, debitis vitae, praesentium adipisci laborum inventore facilis ut ducimus voluptate blanditiis non neque quod dolorem quisquam quo.</p>
+            <img src="./img/dtfuv.jpg" alt="Foto de Cuzco" width="500">
+            <h2>DTF UV</h2>
+            <p>El DTF UV (Direct to Film Ultra Violet) lleva la impresión DTF al siguiente nivel. Utilizando tintas curables con luz UV, esta técnica ofrece una resistencia excepcional al agua, químicos y abrasión. Ideal para aplicaciones en exteriores o prendas que requieran un uso intensivo.</p>
         </div>
 
     </div>
