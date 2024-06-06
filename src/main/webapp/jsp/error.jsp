@@ -8,9 +8,24 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Error</title>
+    <title>Error credenciales incorrectas</title>
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../css/estilos-registro.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<h1>Error en el servlet/ o contraseña incorrecta</h1>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.jsp">Inicio</a></li>
+        </ul>
+    </nav>
+</header>
+
+<form action = "../SvRegistro" method="post" class="form-register">
+    <h4>Credenciales incorrectas</h4>
+
+
+</form>
+
 </body>
 </html>

@@ -7,12 +7,25 @@
   Time: 12:37 p. m.
   To change this template use File | Settings | File Templates.
 --%>
+<%
+  HttpSession sessionActive = request.getSession(false);
+  String usernameA = (String) sessionActive.getAttribute("username");
+  usuariosDAO usuarioDAO = new usuariosDAO();
+  int rol = 0;
+
+  rol = usuarioDAO.getRol(usernameA);
+  if (rol == 0){
+    response.sendRedirect("../jsp/error.jsp");
+  } else if (rol == 2) {
+    response.sendRedirect("../jsp/error.jsp");
+  }
+%>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <html>
 <head>
   <title>Inicio - Subli-Art</title>
   <link href="../css/styles.css" rel="stylesheet" type="text/css">
-  <link rel ="stylesheet" href = "./css/bootstrap.min.css">
+  <link href="../css/estilos-registro.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -36,12 +49,11 @@
       <li><a href="#">Agregar administrador</a></li>
     </ul>
     <%
-      HttpSession sessionActive = request.getSession(false);
       String username = (String) sessionActive.getAttribute("username");
-      usuariosDAO usuarioDAO = new usuariosDAO();
+      usuariosDAO usuarioDAOs = new usuariosDAO();
       usuarios usuario;
 
-      usuario = usuarioDAO.identificarNombre(username);
+      usuario = usuarioDAOs.identificarNombre(username);
     %>
 
 
