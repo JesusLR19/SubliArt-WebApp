@@ -278,11 +278,11 @@ public class usuariosDAO {
                 String hashedPassword = rs.getString("password");
                 autenticado = BCrypt.checkpw(password, hashedPassword);
                 // Aqui verificamos si la contraseña que ingresa el usuario coincide con la que tenemos en la bd con el hash
-                if (autenticado) {
+/*                if (autenticado) {
                     System.out.println("Acceso permitido");
                 }else {
                     System.out.println("Contraseña incorrecta");
-                }
+                }*/
             }
 
         } catch (Exception e) {
@@ -311,11 +311,11 @@ public class usuariosDAO {
 
                 id_rol = rs.getInt("id_rol");
 
-                if(id_rol > 0){
+/*                if(id_rol > 0){
                     System.out.println("Rol obtenido con exito");
                 }else{
                     System.out.println("Rol no encontrado");
-                }
+                }*/
             }
         }catch (Exception e){
             e.printStackTrace();

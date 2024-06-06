@@ -21,8 +21,12 @@
     </nav>
 </header>
 
-<form action = "../SvRegistro" method="post" class="form-register">
+<form action = "#"  class="form-register">
     <h4>Credenciales incorrectas</h4>
+    <button class="botons" value="">
+        <a href="../index.jsp">Volver a inicio</a>
+    </button>
+
 
 
 </form>
