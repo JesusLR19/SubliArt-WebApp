@@ -1,3 +1,8 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,7 +10,7 @@ body {
     background-image: url('/img/fondo.png');
 }
 
-/* Estilos de la barra de navegación */
+/*  NAVBAR */
 .navbar {
     background-color: #24303c;
     color: #fff;
@@ -38,7 +43,7 @@ body {
 .navbar-login {
     margin-left: auto;
 }
-
+/*  NAVBAR */
 .menu-vertical {
     list-style-type: none;
     margin: 0;
@@ -50,7 +55,7 @@ body {
     font-weight: 900;
     text-decoration: none;
 }
-
+/*  CSS GRID */
 .container{
     margin: 20px auto;
     width: 90%;
@@ -110,7 +115,8 @@ body {
     grid-column: 2/4;
     grid-row: 1/4;
 }
-
+/*  CSS GRID */
+/*  POSTS RESPONSIVE */
 .posts{
     width: 100%;
     max-width: 1200px;
@@ -143,9 +149,78 @@ body {
     padding: 10px;
     line-height: 1.4;
 }
+
 @media only screen and (max-width: 767px) {
     .post{
         width: 96%;
         margin: 2%;
     }
 }
+/*  POSTS RESPONSIVE */
+
+header {
+    width: 100%;
+    background: #ff165d;
+    overflow: hidden;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav ul li.login {
+    margin-left: auto; /* Empuja el login a la derecha */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 15px 20px;
+    display: block;
+    font-size: 1.1rem;
+    transition: all .4s ease-in-out;
+}
+
+nav ul li a:hover {
+    background: #FFF;
+    color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        display: block;
+        margin-right: 0;
+    }
+
+    header nav ul li.login {
+        margin-left: 0;
+    }
+
+    nav ul li a {
+        text-align: center;
+    }
+}
+
+

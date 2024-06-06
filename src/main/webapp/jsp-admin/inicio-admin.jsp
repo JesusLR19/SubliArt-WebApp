@@ -17,11 +17,13 @@
 
 <body>
 
-  <nav class="navbar">
-    <div class="navbar-container">
-      <a class="navbar-brand" href="../index.jsp">Inicio</a>
-    </div>
-  </nav>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.jsp">Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <div class="container">
     <ul class="menu-vertical">

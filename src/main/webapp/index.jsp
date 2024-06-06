@@ -9,16 +9,13 @@
 </head>
 <body>
 <!-- Barra de navegación -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a class="navbar-brand" href="#">Subli-Art</a>
-            <div class="navbar-links">
-                <a class="nav-link" href="#">Inicio</a>
-                <a class="nav-link" href="#">Productos</a>
-                <a class="nav-link" href="#">Quiénes somos</a>
-                <a class="nav-link" href="#">Contacto</a>
-            </div>
-            <div class="navbar-login">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
                 <%
                 %>
                 <%
@@ -30,17 +27,17 @@
                     int rol = usuarioDAO.getRol(username);
                     if (rol == 1) {
                 %>
-                <a class="nav-link" href="./jsp-admin/inicio-admin.jsp">Administrar</a>
+                <li class="login"><a href="./jsp-admin/inicio-admin.jsp">Administrar</a></li>
                 <% }%>
-                <a class="nav-link" href="#">Bienvenido <%= username %> </a>
-                <a class="nav-link" href="./SvLogout">Cerrar sesión</a>
+                <li class="login"><a href="#">Bienvenido <%= username %> </a></li>
+                <li class="login"><a href="./SvLogout">Cerrar sesion</a></li>
                 <% } else { %>
-                <a class="nav-link" href="jsp/login.jsp">Login</a>
+                <li class="login"><a href="jsp/login.jsp">Iniciar sesion</a></li>
                 <% } %>
-            </div>
+            </ul>
+        </nav>
+    </header>
 
-        </div>
-    </nav>
 
     <div class="posts">
         <h1> </h1>

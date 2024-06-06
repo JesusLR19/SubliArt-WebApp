@@ -13,11 +13,13 @@
   <link href="../css/estilos-registro.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navbar-container">
-      <a class="navbar-brand" href="../index.jsp">Inicio</a>
-    </div>
-  </nav>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.jsp">Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <form action = "../SvLogin" method="post" class="form-register">
     <h4>Inicio de sesion</h4>
