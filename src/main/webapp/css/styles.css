@@ -44,77 +44,7 @@ body {
     margin-left: auto;
 }
 /*  NAVBAR */
-.menu-vertical {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 300px; /* ancho del menú */
-    background-color: #ffffff;
-    color:black;
-    font-family: Arial, sans-serif;
-    font-weight: 900;
-    text-decoration: none;
-}
-/*  CSS GRID */
-.container{
-    margin: 20px auto;
-    width: 90%;
-    height : 400px;
-    max-width: 1600px;
-    outline: 4px solid;
 
-    display: grid;
-    grid-template-columns:repeat(6,1fr) ;
-    grid-template-rows: 100px 10em 1fr;
-}
-.container-form{
-    margin: 20px auto;
-    width: 90%;
-    height : 400px;
-    max-width: 1600px;
-    outline: 4px solid;
-
-    display: grid;
-    grid-template-columns:repeat(6,1fr) ;
-    grid-template-rows: 100px 10em 1fr;
-}
-.element{
-    color:#ffff;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.element-1{
-    background-image: url("/img/porsche png.png") ;
-    grid-column: 1/5;
-    grid-row: 1/2;
-
-}
-.element-2{
-    background-color: deeppink;
-    grid-column: 5/7;
-    grid-row: 1/2;
-}
-.element-3{
-    background-color: indigo;
-    grid-column: 1/7;
-    grid-row: 2/3;
-}
-.element-4{
-    background-color: royalblue;
-
-}
-
-.element-5{
-    background-color: #cbcbcb;
-    grid-column: 5/7;
-    grid-row: 1/4;
-}
-.element-6{
-    background-color: #cbcbcb;
-    grid-column: 2/4;
-    grid-row: 1/4;
-}
 /*  CSS GRID */
 /*  POSTS RESPONSIVE */
 .posts{

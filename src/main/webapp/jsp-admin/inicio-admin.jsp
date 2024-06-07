@@ -38,8 +38,8 @@
     </nav>
   </header>
 
-  <div class="container">
-    <ul class="menu-vertical">
+  <div class="">
+    <ul>
       <li><a href="#">Lista Usuarios</a> </li>
       <li><a href="identificar-usuario.jsp">Identificar usuario</a></li>
       <li><a href="#">Cambiar contraseña</a> </li>
@@ -57,32 +57,32 @@
     %>
 
 
-    <div class = "element-6">
+    <form action = "#"  class="form-register">
       <label for="id_usuario">id_usuario: </label>
-      <input type="number" name="id_usuario" id="id_usuario" value="<%=usuario.getId_usuario()%>" required readonly>
+      <input class = 'controls' type="number" name="id_usuario" id="id_usuario" value="<%=usuario.getId_usuario()%>" required readonly>
       <br>
       <label for="id_usuarioN">Username: </label>
-      <input type="text" name="id_usuarioN" id="id_usuarioN" value="<%= usuario.getUsername()%>" required readonly>
+      <input class = 'controls' type="text" name="id_usuarioN" id="id_usuarioN" value="<%= usuario.getUsername()%>" required readonly>
       <br>
       <label for="nombre">Nombre: </label>
-      <input type="text" name="nombre" id="nombre" value="<%= usuario.getNombre()%>" required readonly>
+      <input class = 'controls' type="text" name="nombre" id="nombre" value="<%= usuario.getNombre()%>" required readonly>
       <br>
       <label for="apellido_p">Apellido Paterno: </label>
-      <input type="text" name="apellido_p" id="apellido_p" value="<%= usuario.getApellido_p()%>" required readonly>
+      <input class = 'controls' type="text" name="apellido_p" id="apellido_p" value="<%= usuario.getApellido_p()%>" required readonly>
 
       <label for="apellido_m">Apellido Materno: </label>
-      <input type="text" name="apellido_m" id="apellido_m" value="<%= usuario.getApellido_p()%>" required readonly>
+      <input class = 'controls' type="text" name="apellido_m" id="apellido_m" value="<%= usuario.getApellido_p()%>" required readonly>
       <br>
       <label for="id_contacto">id_contacto: </label>
-      <input type="text" name="id_contacto" id="id_contacto" value="<%= usuario.getId_contacto()%>" required readonly>
+      <input class = 'controls' type="text" name="id_contacto" id="id_contacto" value="<%= usuario.getId_contacto()%>" required readonly>
       <br>
       <label for="id_rol">id_rol: </label>
-      <input type="text" name="id_rol" id="id_rol" value="<%= usuario.getId_rol()%>" required readonly>
+      <input class = 'controls' type="text" name="id_rol" id="id_rol" value="<%= usuario.getId_rol()%>" required readonly>
       <br>
       <label for="estatus">Estatus: </label>
-      <input type="text" name="estatus" id="estatus" value="<%= usuario.isEstatus()%>" required readonly>
+      <input class = 'controls' type="text" name="estatus" id="estatus" value="<%= usuario.isEstatus()%>" required readonly>
       <br>
-    </div>
+    </form>
 
   </div>
 
