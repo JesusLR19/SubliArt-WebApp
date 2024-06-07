@@ -1,6 +1,6 @@
 <%@ page import="Datos.usuariosDAO" %>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<html>
+<!DOCTYPE html>
 <head>
     <title>Inicio - Subli-Art</title>
     <link href="./css/styles.css" rel="stylesheet" type="text/css">
