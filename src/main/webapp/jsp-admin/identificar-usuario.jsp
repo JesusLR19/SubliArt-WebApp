@@ -36,10 +36,14 @@
         <aside>
 
             <ul class="lista">
-                <li><a href="#home">Home</a></li>
-                <li><a class="active" href="#news">Identificar usuario</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="inicio-admin.jsp">Inicio</a> </li>
+                <li><a href="listar-usuarios.jsp">Lista Usuarios</a> </li>
+                <li><a class = "active" href="identificar-usuario.jsp">Identificar usuario</a></li>
+                <li><a href="#">Cambiar contraseña</a> </li>
+                <li><a href="#">Añadir producto</a> </li>
+                <li><a href="#">Eliminar producto</a> </li>
+                <li><a href="#">Editar producto</a> </li>
+                <li><a href="#">Agregar administrador</a></li>
             </ul>
 
 

@@ -42,7 +42,7 @@
 
       <ul class="lista">
         <li><a class = "active" href="#">Inicio</a> </li>
-        <li><a href="#">Lista Usuarios</a> </li>
+        <li><a href="listar-usuarios.jsp">Lista Usuarios</a> </li>
         <li><a href="identificar-usuario.jsp">Identificar usuario</a></li>
         <li><a href="#">Cambiar contraseña</a> </li>
         <li><a href="#">Añadir producto</a> </li>
@@ -62,7 +62,7 @@
       usuario = usuarioDAOs.identificarNombre(username);
     %>
     <section>
-
+      <h2>Informacion de cuenta</h2>
       <form action = "#"  class="form-register">
         <label for="id_usuario">id_usuario: </label>
         <input class = 'controls' type="number" name="id_usuario" id="id_usuario" value="<%=usuario.getId_usuario()%>" required readonly>
