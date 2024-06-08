@@ -39,7 +39,7 @@
                 <li><a href="inicio-admin.jsp">Inicio</a> </li>
                 <li><a href="listar-usuarios.jsp">Lista Usuarios</a> </li>
                 <li><a class = "active" href="identificar-usuario.jsp">Identificar usuario</a></li>
-                <li><a href="#">Cambiar contraseña</a> </li>
+                <li><a href="cambiar-password.jsp">Cambiar contraseña</a> </li>
                 <li><a href="#">Añadir producto</a> </li>
                 <li><a href="#">Eliminar producto</a> </li>
                 <li><a href="#">Editar producto</a> </li>
