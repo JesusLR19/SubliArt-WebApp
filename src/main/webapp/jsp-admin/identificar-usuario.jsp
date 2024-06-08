@@ -34,19 +34,18 @@
 
     <div class = "row">
         <aside>
-            <h2>Aside</h2>
 
-                <a href="#">Home</a>
-                <br>
-                <a href="#">Home</a>
-                <br>
-                <a href="#">Home</a>
-                <br>
-                <a href="#">Home</a>
+            <ul class="lista">
+                <li><a href="#home">Home</a></li>
+                <li><a class="active" href="#news">Identificar usuario</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
 
         </aside>
         <section>
-            <h2>Section</h2>
+            <h2>Identificar Usuario</h2>
             <form action = "#"  class="form-register">
                 <h4>Identificar usuario</h4>
                 <button class="botons" value="">
@@ -59,5 +58,6 @@
     <footer>
         <h2>Footer</h2>
     </footer>
+
 </body>
 </html>
