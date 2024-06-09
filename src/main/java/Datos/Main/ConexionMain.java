@@ -1,4 +1,6 @@
-package Datos;
+package Datos.Main;
+import Datos.Conexion;
+
 import java.sql.*;
 public class ConexionMain {
     public static void main(String[]args){

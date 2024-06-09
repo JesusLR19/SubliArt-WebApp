@@ -1,7 +1,6 @@
-package Datos;
+package Datos.Main;
+import Datos.usuariosDAO;
 import Modelo.usuarios;
-
-import java.util.List;
 
 public class Main_usuariosDAO {
     public static void main(String[] args) throws Exception {
@@ -19,8 +18,9 @@ public class Main_usuariosDAO {
         //String password = "1233";
         //usuarioDAO.verificarUsuario(username,password);
 
-        usu = usuarioDAO.identificarNombre("ichuchex");
-        System.out.println(usu.getNombre());
+        //usu = usuarioDAO.identificarNombre("ichuchex");
+        //System.out.println(usu.getNombre());
 
+        //usuarioDAO.desactivarUsuario("ichuchex");
     }
 }
