@@ -42,6 +42,7 @@ footer{
     display:flex;
     flex-wrap: wrap;
     gap:1rem;
+    margin:auto;
 }
 .menu{
     flex-basis: 20rem;
@@ -214,4 +215,10 @@ nav ul li a:hover {
 .lista li a:hover:not(.active) {
     background-color: #555;
     color: white;
+}
+table{
+    border-collapse: collapse;
+}
+.table td,th{
+    padding: 5px 10px;
 }

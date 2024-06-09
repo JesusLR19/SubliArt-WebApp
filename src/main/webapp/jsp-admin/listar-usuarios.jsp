@@ -18,7 +18,7 @@
 <head>
     <title>Inicio - Subli-Art</title>
     <link href="<%= request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css">
-    <link href="<%= request.getContextPath()%>/css/estilos-registro.css" rel="stylesheet" type="text/css">
+    <link href="<%= request.getContextPath()%>/css/tablas.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -39,6 +39,7 @@
             <li><a href="<%= request.getContextPath()%>/jsp-admin/inicio-admin.jsp">Inicio</a> </li>
             <li><a class = "active" href="<%= request.getContextPath()%>/jsp-admin/listar-usuarios.jsp">Lista Usuarios</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-admin/identificar-usuario.jsp">Identificar usuario</a></li>
+            <li><a href="#">Eliminar usuario</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-admin/cambiar-password.jsp">Cambiar contraseña</a> </li>
             <li><a href="#">Añadir producto</a> </li>
             <li><a href="#">Eliminar producto</a> </li>
@@ -50,7 +51,47 @@
     </aside>
     <section>
         <h2>Lista de usuarios</h2>
-        <table border="1">
+        <div class="container">
+            <table class="table">
+                <caption>Usuarios registrados</caption>
+                <thead>
+                <tr>
+                    <th>id_usuario</th>
+                    <th>Nombre</th>
+                    <th>ApellidoP</th>
+                    <th>ApellidoM</th>
+                    <th>Username</th>
+                    <th>id_contacto</th>
+                    <th>id_rol</th>
+                    <th>Estatus</th>
+                </tr>
+                </thead>
+                <tbody>
+                <%
+                    usuariosDAO usuarioDAO2 = new usuariosDAO();
+                    List<usuarios> usuarios = usuarioDAO2.listar();
+                    if(usuarios != null){
+                        for (usuarios usuario : usuarios) {
+                %>
+                <tr>
+                    <td data-label="id_usuario"><%=usuario.getId_usuario() %></td>
+                    <td data-label="Nombre"><%=usuario.getNombre() %></td>
+                    <td data-label="ApellidoP"><%=usuario.getApellido_p() %></td>
+                    <td data-label="ApellidoM"><%=usuario.getApellido_m() %></td>
+                    <td data-label="Username"><%=usuario.getUsername() %></td>
+                    <td data-label="id_contacto"><%=usuario.getId_contacto() %></td>
+                    <td data-label="id_rol"><%=usuario.getId_rol() %></td>
+                    <td data-label="id_rol"><%=usuario.isEstatus() %></td>
+                </tr>
+                <%
+                        }
+                    }
+                %>
+                </tbody>
+            </table>
+        </div>
+
+<%--        <table border="1">
             <tr>
                 <th>id_usuario</th>
                 <th>Nombre</th>
@@ -81,7 +122,7 @@
                     }
                 }
             %>
-        </table>
+        </table>--%>
     </section>
 </div>
 

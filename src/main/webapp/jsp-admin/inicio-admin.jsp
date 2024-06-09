@@ -24,8 +24,8 @@
 <!DOCTYPE html>
 <head>
   <title>Inicio - Subli-Art</title>
-  <link href="../css/styles.css" rel="stylesheet" type="text/css">
-  <link href="../css/estilos-registro.css" rel="stylesheet" type="text/css">
+  <link href="<%= request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css">
+  <link href="<%= request.getContextPath()%>/css/estilos-registro.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
   <header>
     <nav>
       <ul>
-        <li><a href="../index.jsp">Inicio</a></li>
+        <li><a href="<%= request.getContextPath()%>/index.jsp">Inicio</a></li>
       </ul>
     </nav>
   </header>
@@ -41,10 +41,11 @@
     <aside>
 
       <ul class="lista">
-        <li><a class = "active" href="#">Inicio</a> </li>
-        <li><a href="listar-usuarios.jsp">Lista Usuarios</a> </li>
-        <li><a href="identificar-usuario.jsp">Identificar usuario</a></li>
-        <li><a href="cambiar-password.jsp">Cambiar contraseña</a> </li>
+        <li><a class = "active" href="<%= request.getContextPath()%>/jsp-admin/inicio-admin.jsp">Inicio</a> </li>
+        <li><a href="<%= request.getContextPath()%>/jsp-admin/listar-usuarios.jsp">Lista Usuarios</a> </li>
+        <li><a href="<%= request.getContextPath()%>/jsp-admin/identificar-usuario.jsp">Identificar usuario</a></li>
+        <li><a href="#">Eliminar usuario</a> </li>
+        <li><a href="<%= request.getContextPath()%>/jsp-admin/cambiar-password.jsp">Cambiar contraseña</a> </li>
         <li><a href="#">Añadir producto</a> </li>
         <li><a href="#">Eliminar producto</a> </li>
         <li><a href="#">Editar producto</a> </li>
