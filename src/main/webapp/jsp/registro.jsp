@@ -9,19 +9,29 @@
 <!DOCTYPE html>
 <head>
     <title>Registro</title>
-    <link href="../css/styles.css" rel="stylesheet" type="text/css">
-    <link href="../css/estilos-registro.css" rel="stylesheet" type="text/css">
+    <link href="<%= request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="<%= request.getContextPath()%>/css/estilos-registro.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="../index.jsp">Inicio</a></li>
+                <li><a href="<%= request.getContextPath()%>/index.jsp">Inicio</a></li>
             </ul>
         </nav>
     </header>
+    <%
+        String messageError = (String) request.getAttribute("errorMessage");
+        if (messageError != null) {
+    %>
+    <form action = "#" method="post" class="form-register">
+        <h4>Nombre de usuario en existencia.</h4>
+    </form>
+    <%
+        }
+    %>
 
-    <form action = "../SvRegistro" method="post" class="form-register">
+    <form action = "<%= request.getContextPath()%>/SvRegistro" method="post" class="form-register">
         <h4>Registro</h4>
         <input class ="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
         <input class ="controls" type="text" name="apellido_p" id="apellido_p" placeholder="Ingrese su apellido paterno" required>
@@ -30,7 +40,8 @@
         <input class ="controls" type="text" name="password" id="password" placeholder="Ingrese su contraseña" required>
         <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a> </p>
         <input class ="botons" type="submit" value ="Registrar">
-        <p><a href="./login.jsp">Ya tengo cuenta</a></p>
+
+        <p><a href="<%= request.getContextPath()%>/jsp/login.jsp">Ya tengo cuenta</a></p>
 
     </form>
 

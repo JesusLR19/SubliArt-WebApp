@@ -50,7 +50,7 @@
     </aside>
     <section>
         <h2>Lista de usuarios</h2>
-        <table>
+        <table border="1">
             <tr>
                 <th>id_usuario</th>
                 <th>Nombre</th>

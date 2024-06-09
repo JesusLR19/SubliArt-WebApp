@@ -1,5 +1,6 @@
 package Controlador;
 import java.io.IOException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,7 +29,9 @@ public class SvRegistro extends HttpServlet{
             if(verificacion > 0){
                 response.sendRedirect("jsp/autenticado.jsp");
             }else {
-                response.sendRedirect("jsp/error.jsp");
+                request.setAttribute("errorMessage", "Nombre de usuario en existencia");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/registro.jsp");
+                dispatcher.forward(request, response);
             }
 
         }catch (Exception e){
