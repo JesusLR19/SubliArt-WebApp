@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import Datos.usuariosDAO;
-import Modelo.usuarios;
+
 @WebServlet(name ="SvBorrarUsu" , value = "/SvBorrarUsu")
 public class SvBorrarUsu extends HttpServlet {
 
@@ -22,7 +22,7 @@ public class SvBorrarUsu extends HttpServlet {
             e.printStackTrace();
             throw new ServletException("Error al identificar el nombre de usuario");
         }
-        request.setAttribute("mensajeExito","Mensaje Exito" );
+        request.setAttribute("mensajeExito","mensajeExito" );
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/jsp-admin/eliminar-usuario.jsp");
         rd.forward(request, response);
     }

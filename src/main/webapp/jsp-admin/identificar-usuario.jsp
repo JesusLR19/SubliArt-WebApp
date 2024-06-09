@@ -16,7 +16,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <head>
-    <title>Inicio - Subli-Art</title>
+    <title>Identificar usuario - username</title>
     <link href="<%= request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css">
     <link href="<%= request.getContextPath()%>/css/estilos-registro.css" rel="stylesheet" type="text/css">
 </head>
@@ -39,7 +39,7 @@
                 <li><a href="<%= request.getContextPath()%>/jsp-admin/inicio-admin.jsp">Inicio</a> </li>
                 <li><a href="<%= request.getContextPath()%>/jsp-admin/listar-usuarios.jsp">Lista Usuarios</a> </li>
                 <li><a class = "active" href="<%= request.getContextPath()%>/jsp-admin/identificar-usuario.jsp">Identificar usuario</a></li>
-                <li><a href="#">Eliminar usuario</a> </li>
+                <li><a href="<%= request.getContextPath()%>/jsp-admin/eliminar-usuario.jsp">Desactivar usuario</a> </li>
                 <li><a href="<%= request.getContextPath()%>/jsp-admin/cambiar-password.jsp">Cambiar contraseña</a> </li>
                 <li><a href="#">Añadir producto</a> </li>
                 <li><a href="#">Eliminar producto</a> </li>
@@ -51,6 +51,7 @@
         </aside>
         <section>
             <h2>Identificar Usuario</h2>
+            <h3>Ingresar nombre de usuario para realizar busqueda.</h3>
             <form action = "<%= request.getContextPath()%>/SvIdentifyUsername"  class="form-register">
                 <h4>Identificar usuario</h4>
                 <input class ="controls" type="text" name="username" id="username" placeholder="Ingrese un nombre de usuario" required>
