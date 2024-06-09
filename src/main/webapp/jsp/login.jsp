@@ -27,7 +27,7 @@
     <input class ="controls" type="password" name="password" id="password" placeholder="Ingrese su contraseña" required>
     <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a> </p>
     <input class ="botons" type="submit" value ="Iniciar sesion">
-    <p><a href="<%= request.getContextPath()%>/registro.jsp">Aun no tengo cuenta</a></p>
+    <p><a href="<%= request.getContextPath()%>/jsp/registro.jsp">Aun no tengo cuenta</a></p>
     <%
       String messageError = (String) request.getAttribute("errorMessage");
       if (messageError != null) {

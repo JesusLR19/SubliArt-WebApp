@@ -9,14 +9,14 @@
 <!DOCTYPE html>
 <head>
     <title>Error credenciales incorrectas</title>
-    <link href="../css/styles.css" rel="stylesheet" type="text/css">
-    <link href="../css/estilos-registro.css" rel="stylesheet" type="text/css">
+    <link href="<%= request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="<%= request.getContextPath()%>/css/estilos-registro.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <header>
     <nav>
         <ul>
-            <li><a href="../index.jsp">Inicio</a></li>
+            <li><a href="<%= request.getContextPath()%>/index.jsp">Inicio</a></li>
         </ul>
     </nav>
 </header>
@@ -24,7 +24,7 @@
 <form action = "#"  class="form-register">
     <h4>Credenciales incorrectas</h4>
     <button class="botons" value="">
-        <a href="../index.jsp">Volver a inicio</a>
+        <a href="<%= request.getContextPath()%>/index.jsp">Volver a inicio</a>
     </button>
 
 
