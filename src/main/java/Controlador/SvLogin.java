@@ -5,6 +5,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpSession;
 import Datos.usuariosDAO;
 
@@ -39,7 +40,8 @@ public class SvLogin extends HttpServlet {
                 }
             }else {
                 request.setAttribute("errorMessage", "Username o contraseña incorrectos");
-                request.getRequestDispatcher("jsp/login.jsp").forward(request, response);
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/login.jsp");
+                dispatcher.forward(request, response);
             }
         } catch (Exception e) {
             e.printStackTrace();

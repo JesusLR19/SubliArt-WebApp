@@ -21,6 +21,10 @@ body{
     margin-bottom: 20px;
     text-align: center;
 }
+.form-register h5{
+    text-align: center;
+    color: red;
+}
 
 .controls{
     width: 100%;
