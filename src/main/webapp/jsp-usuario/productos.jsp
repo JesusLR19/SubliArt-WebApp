@@ -4,12 +4,16 @@
 <head>
     <meta name ="viewport" content="width=device-width, initial-scale=1.0">
     <title>SubliArt</title>
-    <link rel = "stylesheet" href="<%= request.getContextPath()%>/css/productos.css">
+    <link rel = "stylesheet" href="<%= request.getContextPath()%>/css-productos/productos.css">
 </head>
 <body>
-    <h1>Productos</h1>
 
-    <a href="#">Enlace</a>
+    <div class = "container">
+
+        <div class = "row"></div>
+            <div class ="col-4"></div>
+                <div class = "col-8"></div>
+    </div>
 
 </body>
 </html>
