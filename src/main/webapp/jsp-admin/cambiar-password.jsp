@@ -48,14 +48,17 @@
         </ul>
     </aside>
 
+    <%
+        usuarios usu = usuarioDAO.identificarNombre(usernameA);
+    %>
 
 
     <section>
         <h2>Cambiar contraseña</h2>
         <h3>Ingresa tu nueva contraseña y envia el formulario.</h3>
-        <form action = "<%= request.getContextPath()%>/SvActivarUsu"  class="form-register">
+        <form action = "<%= request.getContextPath()%>/Sv"  class="form-register">
             <h4>Cambiar contraseña</h4>
-            <input class ="controls" type="text" name="id_usuario" id="id_usuario" value="<%=usernameA %>" readonly>
+            <input class ="controls" type="text" name="id_usuario" id="id_usuario" value="<%=usu.getId_usuario() %>" readonly>
             <input class ="controls" type="password" name="password" id="password" placeholder="Ingresa nueva contraseña" required>
             <button class="botons" type="submit">Cambiar contraseña</button>
         </form>

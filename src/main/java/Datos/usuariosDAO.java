@@ -238,7 +238,7 @@ public class usuariosDAO {
         return registros;
     }
 
-    public int cambiarPassword(String id_usuario, String password){
+    public int cambiarPassword(int id_usuario, String password){
         Connection conn = null;
         PreparedStatement ps = null;
         int registros = 0;
@@ -249,6 +249,7 @@ public class usuariosDAO {
 
             String passwordHashed = BCrypt.hashpw(password,BCrypt.gensalt());
             ps.setString(1,passwordHashed);
+            ps.setInt(2,id_usuario);
 
             registros = ps.executeUpdate();
             if(registros > 0) System.out.println("Tu contraseña se ha cambiado correctamente");

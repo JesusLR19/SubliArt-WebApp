@@ -22,5 +22,6 @@ public class Main_usuariosDAO {
         //System.out.println(usu.getNombre());
 
         //usuarioDAO.activarUsuario("ichuchex");
+        usuarioDAO.cambiarPassword(1,"12345");
     }
 }
