@@ -88,7 +88,7 @@
         </div>
 
 
-        <form action = "<%= request.getContextPath()%>/SvAddProducto"  class="form-register" method="post">
+        <form action = "<%= request.getContextPath()%>/SvModificarAlmacen"  class="form-register" method="post">
             <h4>Modificar cantidad y estatus</h4>
             <h5>id_producto</h5>
             <select id="id_producto" name="id_producto" class="controls" required>
@@ -101,12 +101,20 @@
                 <option value="true">Activar</option>
                 <option value="false">Desactivar</option>
             </select>
+            <button class="botons" type="submit">Modificar producto</button>
         </form>
         <%
             String mensajeExito = (String) request.getAttribute("mensajeExito");
             if (mensajeExito != null) {
         %>
-        <p>Producto agregado correctamente.</p>
+        <p>Producto modificado correctamente.</p>
+
+        <% } %>
+        <%
+            String msgError = (String) request.getAttribute("msgError");
+            if (msgError != null) {
+        %>
+        <p>Error al modificar el producto.</p>
 
         <% } %>
 

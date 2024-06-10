@@ -13,7 +13,7 @@ public class almacenDAO {
         List<almacen> Almacen = new ArrayList<>();
         try {
             conn = Conexion.getConnection();
-            ps = conn.prepareStatement("SELECT * FROM almacen");
+            ps = conn.prepareStatement("SELECT * FROM almacen ORDER BY id_producto ASC");
             rs = ps.executeQuery();
 
             while (rs.next()){
@@ -115,6 +115,34 @@ public class almacenDAO {
             registros = ps.executeUpdate();
             if (registros > 0) {
                 System.out.println("El producto se ha desactivado con éxito");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return registros;
+    }
+    public int update(int id_producto, int cantidad, boolean estatus) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        int registros = 0;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("UPDATE almacen SET  cantidad =?, estatus=? WHERE id_producto = ?");
+
+            ps.setInt(1, cantidad);
+            ps.setBoolean(2, estatus);
+            ps.setInt(3, id_producto);
+
+
+
+            registros = ps.executeUpdate();
+            if (registros > 0) {
+                System.out.println("El producto se ha actualizado con éxito");
             }
 
         } catch (Exception e) {

@@ -10,11 +10,12 @@ public class Main_productos {
 
         productosDAO dao = new productosDAO();
         almacenDAO almacenDAOs = new almacenDAO();
-        List<almacen> almacen = almacenDAOs.listar();
-
-        for (almacen a : almacen) {
-            System.out.println(a.getId_producto());
-        }
+//        List<almacen> almacen = almacenDAOs.listar();
+//
+//        for (almacen a : almacen) {
+//            System.out.println(a.getId_producto());
+//        }
+        almacenDAOs.update(1,49,true);
 
 //        List<productos> productos = dao.listarProductos();
 //        for (productos producto : productos) {
