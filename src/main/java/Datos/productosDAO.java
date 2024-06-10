@@ -1,11 +1,45 @@
 package Datos;
 import Modelo.productos;
+import Modelo.usuarios;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 public class productosDAO {
+
+    public List<productos> listarProductos(){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        List<productos> productosList = new ArrayList<>();
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("SELECT * FROM productos     ORDER BY id_producto ASC ");
+
+            rs = ps.executeQuery();
+
+            while (rs.next()){
+                int id_producto = rs.getInt("id_producto");
+                String nombre_producto = rs.getString("nombre_producto");
+                int id_descripcion = rs.getInt("id_descripcion");
+                int id_categoria = rs.getInt("id_categoria");
+                float precio =  rs.getFloat("precio");
+
+                productos producto_add = new productos(id_producto,nombre_producto,id_descripcion,id_categoria,precio);
+                productosList.add(producto_add);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            Conexion.close(rs);
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return productosList;
+    }
     //No habia notado que me hacia falta esta clase DAO jaja
     public void addProducto(productos producto){
         Connection conn = null;
@@ -56,4 +90,5 @@ public class productosDAO {
         }
         return producto;
     }
+
 }
