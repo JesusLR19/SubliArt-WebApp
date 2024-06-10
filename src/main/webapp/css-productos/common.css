@@ -4,15 +4,15 @@
 
 html,body{
     margin:0;
-    paddin:0;
+    padding:0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 a{
-    color:var(--primary-color);
+    color:var(--color-primary);
     text-decoration: none;
 }
 a:hover{
-    color: #334154;
+    color: var(--color-primary-dark);
     text-decoration: underline;
 }
