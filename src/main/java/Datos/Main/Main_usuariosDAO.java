@@ -21,6 +21,6 @@ public class Main_usuariosDAO {
         //usu = usuarioDAO.identificarNombre("ichuchex");
         //System.out.println(usu.getNombre());
 
-        //usuarioDAO.desactivarUsuario("ichuchex");
+        //usuarioDAO.activarUsuario("ichuchex");
     }
 }

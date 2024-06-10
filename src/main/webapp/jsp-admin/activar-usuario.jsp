@@ -39,7 +39,8 @@
             <li><a href="<%= request.getContextPath()%>/jsp-admin/inicio-admin.jsp">Inicio</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-admin/listar-usuarios.jsp">Lista Usuarios</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-admin/identificar-usuario.jsp">Identificar usuario</a></li>
-            <li><a class = "active" href="<%= request.getContextPath()%>/jsp-admin/eliminar-usuario.jsp">Desactivar usuario</a> </li>
+            <li><a href="<%= request.getContextPath()%>/jsp-admin/eliminar-usuario.jsp">Desactivar usuario</a> </li>
+            <li><a class = "active" href="<%= request.getContextPath()%>/jsp-admin/activar-usuario.jsp">Activar usuario</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-admin/cambiar-password.jsp">Cambiar contraseña</a> </li>
             <li><a href="#">Añadir producto</a> </li>
             <li><a href="#">Eliminar producto</a> </li>
@@ -52,7 +53,7 @@
     <section>
         <h2>Activar Usuario</h2>
         <h3>Ingresar nombre de usuario para colocar su estatus en true.</h3>
-        <form action = "<%= request.getContextPath()%>/SvBorrarUsu"  class="form-register">
+        <form action = "<%= request.getContextPath()%>/SvActivarUsu"  class="form-register">
             <h4>Usuario para activar</h4>
             <input class ="controls" type="text" name="username" id="username" placeholder="Ingrese un nombre de usuario" required>
             <button class="botons" type="submit">Activar</button>
@@ -61,7 +62,7 @@
             String mensajeExito = (String) request.getAttribute("mensajeExito");
             if (mensajeExito != null) {
         %>
-        <p>Usuario desactivado correctamente.</p>
+        <p>Usuario activado correctamente.</p>
 
         <% } %>
     </section>

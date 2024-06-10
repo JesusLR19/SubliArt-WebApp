@@ -347,7 +347,31 @@ public class usuariosDAO {
         }
         return registros;
     }
+    public int activarUsuario(String username) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        int registros = 0;
 
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("UPDATE usuarios SET estatus = ? WHERE username = ?");
+
+            ps.setBoolean(1, true);
+            ps.setString(2, username);
+
+            registros = ps.executeUpdate();
+            if (registros > 0) {
+                System.out.println("El usuario se ha activado con éxito");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return registros;
+    }
 
 
 }
