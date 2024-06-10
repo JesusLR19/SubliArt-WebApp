@@ -15,7 +15,7 @@ public class usuariosDAO {
         List<usuarios> lista_usuarios = new ArrayList<>();
         try {
             conn = Conexion.getConnection();
-            ps = conn.prepareStatement("SELECT * FROM usuarios");
+            ps = conn.prepareStatement("SELECT * FROM usuarios ORDER BY id_usuario ASC ");
             rs = ps.executeQuery();
 
             while (rs.next()){

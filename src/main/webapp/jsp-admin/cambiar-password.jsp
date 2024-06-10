@@ -56,12 +56,27 @@
     <section>
         <h2>Cambiar contraseña</h2>
         <h3>Ingresa tu nueva contraseña y envia el formulario.</h3>
-        <form action = "<%= request.getContextPath()%>/Sv"  class="form-register">
+        <form action = "<%= request.getContextPath()%>/SvCambiarPswd"  class="form-register" method="post">
             <h4>Cambiar contraseña</h4>
+            <h5>id_usuario</h5>
             <input class ="controls" type="text" name="id_usuario" id="id_usuario" value="<%=usu.getId_usuario() %>" readonly>
             <input class ="controls" type="password" name="password" id="password" placeholder="Ingresa nueva contraseña" required>
             <button class="botons" type="submit">Cambiar contraseña</button>
         </form>
+        <%
+            String mensajeExito = (String) request.getAttribute("mensajeExito");
+            if (mensajeExito != null) {
+        %>
+        <p>Contraseña cambiada correctamente.</p>
+
+        <% } %>
+        <%
+            String msgFailed = (String) request.getAttribute("msgFailed");
+            if (msgFailed != null) {
+        %>
+        <p>No se pudo cambiar la contraseña.</p>
+
+        <% } %>
 
     </section>
 </div>

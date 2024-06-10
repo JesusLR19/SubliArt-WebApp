@@ -53,7 +53,7 @@
     <section>
         <h2>Activar Usuario</h2>
         <h3>Ingresar nombre de usuario para colocar su estatus en true.</h3>
-        <form action = "<%= request.getContextPath()%>/SvActivarUsu"  class="form-register">
+        <form action = "<%= request.getContextPath()%>/SvActivarUsu"  class="form-register" method="get">
             <h4>Usuario para activar</h4>
             <input class ="controls" type="text" name="username" id="username" placeholder="Ingrese un nombre de usuario" required>
             <button class="botons" type="submit">Activar</button>
