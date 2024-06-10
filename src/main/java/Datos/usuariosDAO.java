@@ -191,17 +191,17 @@ public class usuariosDAO {
         return registros;
     }
 
-    public int cambiarNombre(usuarios usuario){
+    public int cambiarNombre(String username, String nombre){
         Connection conn = null;
         PreparedStatement ps = null;
         int registros = 0;
 
         try {
             conn = Conexion.getConnection();
-            ps = conn.prepareStatement("UPDATE usuarios SET nombre=?");
+            ps = conn.prepareStatement("UPDATE usuarios SET nombre=? WHERE username = ?");
+            ps.setString(1,username);
 
-            ps.setString(1,usuario.getNombre());
-
+            ps.setString(2,nombre);
             registros = ps.executeUpdate();
             if(registros > 0) System.out.println("Tu nombre se ha cambiado correctamente");
 
@@ -238,16 +238,16 @@ public class usuariosDAO {
         return registros;
     }
 
-    public int cambiarPassword(usuarios usuario){
+    public int cambiarPassword(String id_usuario, String password){
         Connection conn = null;
         PreparedStatement ps = null;
         int registros = 0;
 
         try {
             conn = Conexion.getConnection();
-            ps = conn.prepareStatement("UPDATE usuarios SET password=?");
+            ps = conn.prepareStatement("UPDATE usuarios SET password=? WHERE id_usuario=?");
 
-            String passwordHashed = BCrypt.hashpw(usuario.getPassword(),BCrypt.gensalt());
+            String passwordHashed = BCrypt.hashpw(password,BCrypt.gensalt());
             ps.setString(1,passwordHashed);
 
             registros = ps.executeUpdate();

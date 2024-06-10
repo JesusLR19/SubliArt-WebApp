@@ -40,7 +40,6 @@
             <li><a href="<%= request.getContextPath()%>/jsp-admin/listar-usuarios.jsp">Lista Usuarios</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-admin/identificar-usuario.jsp">Identificar usuario</a></li>
             <li><a class = "active" href="<%= request.getContextPath()%>/jsp-admin/eliminar-usuario.jsp">Desactivar usuario</a> </li>
-            <li><a href="<%= request.getContextPath()%>/jsp-admin/activar-usuario.jsp">Activar usuario</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-admin/cambiar-password.jsp">Cambiar contraseña</a> </li>
             <li><a href="#">Añadir producto</a> </li>
             <li><a href="#">Eliminar producto</a> </li>
@@ -51,12 +50,12 @@
 
     </aside>
     <section>
-        <h2>Desactivar Usuario</h2>
-        <h3>Ingresar nombre de usuario para colocar su estatus en false.</h3>
+        <h2>Activar Usuario</h2>
+        <h3>Ingresar nombre de usuario para colocar su estatus en true.</h3>
         <form action = "<%= request.getContextPath()%>/SvBorrarUsu"  class="form-register">
-            <h4>Usuario a desactivar</h4>
+            <h4>Usuario para activar</h4>
             <input class ="controls" type="text" name="username" id="username" placeholder="Ingrese un nombre de usuario" required>
-            <button class="botons" type="submit">Desactivar</button>
+            <button class="botons" type="submit">Activar</button>
         </form>
         <%
             String mensajeExito = (String) request.getAttribute("mensajeExito");
