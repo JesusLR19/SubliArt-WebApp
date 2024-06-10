@@ -34,7 +34,7 @@ public class SvAddProducto extends HttpServlet {
             throw new ServletException("Error en el Servlet");
         }
         request.setAttribute("mensajeExito","mensajeExito" );
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/jsp-admin/add-producto.jsp");
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/jsp-admin/add_producto.jsp");
         rd.forward(request, response);
     }
 }

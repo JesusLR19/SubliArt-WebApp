@@ -92,7 +92,7 @@
         </div>
 
 
-        <form action = "<%= request.getContextPath()%>/"  class="form-register" method="post">
+        <form action = "<%= request.getContextPath()%>/SvAddProducto"  class="form-register" method="get">
             <h4>Agregar producto</h4>
             <input class ="controls" type="text" name="nombre_producto" id="nombre_producto" placeholder="Nombre del producto" required>
             <h5>id_descripcion</h5>
@@ -110,6 +110,13 @@
             <input class ="controls" type="text" name="precio" id="precio" placeholder="Ingresa el precio" required>
             <button class="botons" type="submit">Agregar producto</button>
         </form>
+        <%
+        String mensajeExito = (String) request.getAttribute("mensajeExito");
+        if (mensajeExito != null) {
+        %>
+        <p>Producto agregado correctamente.</p>
+
+        <% } %>
 
     </section>
 </div>

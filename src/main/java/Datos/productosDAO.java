@@ -47,7 +47,7 @@ public class productosDAO {
 
         try {
             conn = Conexion.getConnection();
-            ps = conn.prepareStatement("INSERT INTO pedidos (nombre_producto,id_descripcion,id_categoria,precio) VALUES (?,?,?,?)");
+            ps = conn.prepareStatement("INSERT INTO productos (nombre_producto,id_descripcion,id_categoria,precio) VALUES (?,?,?,?)");
 
             ps.setString(1,producto.getNombre_producto());
             ps.setInt(2,producto.getId_descripcion());
