@@ -14,7 +14,7 @@ public class SvAddProducto extends HttpServlet {
     private  productosDAO productoDAO = new productosDAO();
 
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String nombre_producto = request.getParameter("nombre_producto");
         String id_desc = request.getParameter("id_descripcion");
         String id_cat = request.getParameter("id_categoria");

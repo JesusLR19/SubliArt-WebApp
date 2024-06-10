@@ -1,7 +1,7 @@
 <%@ page import="Datos.usuariosDAO" %>
 <%@ page import="Modelo.usuarios" %>
-<%@ page import="Datos.productosDAO" %>
-<%@ page import="Modelo.productos" %>
+<%@ page import="Datos.almacenDAO" %>
+<%@ page import="Modelo.almacen" %>
 <%@ page import ="java.io.*, java.util.*"%>
 <%
     HttpSession sessionActive = request.getSession(false);
@@ -45,41 +45,37 @@
             <li><a href="<%= request.getContextPath()%>/jsp-admin/eliminar-usuario.jsp">Desactivar usuario</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-admin/activar-usuario.jsp">Activar usuario</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-admin/cambiar-password.jsp">Cambiar contraseña</a> </li>
-            <li><a class = "active" href="<%= request.getContextPath()%>/jsp-admin/add_producto.jsp">Añadir producto</a> </li>
-            <li><a href="<%= request.getContextPath()%>/jsp-admin/eliminar-producto.jsp">Eliminar producto</a> </li>
+            <li><a href="<%= request.getContextPath()%>/jsp-admin/add_producto.jsp">Añadir producto</a> </li>
+            <li><a class = "active" href="<%= request.getContextPath()%>/jsp-admin/eliminar-producto.jsp">Eliminar producto</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-admin/editar-producto.jsp">Editar producto</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-admin/agregar-administrador.jsp">Agregar administrador</a></li>
         </ul>
     </aside>
 
     <section>
-        <h2>Lista de productos</h2>
+        <h2>Lista de productos en almacen</h2>
 
         <div class="container">
             <table class="table">
-                <caption>Productos</caption>
+                <caption>Productos en almacen</caption>
                 <thead>
                 <tr>
                     <th>id_producto</th>
-                    <th>nombre_producto</th>
-                    <th>id_descripcion</th>
-                    <th>id_categoria</th>
-                    <th>precio</th>
+                    <th>cantidad</th>
+                    <th>estatus</th>
                 </tr>
                 </thead>
                 <tbody>
                 <%
-                    productosDAO productoDAO = new productosDAO();
-                    List<productos> productosList = productoDAO.listarProductos();
-                    if(productosList != null){
-                        for (productos producto : productosList) {
+                    almacenDAO almacenDAOs = new almacenDAO();
+                    List<almacen> almacen = almacenDAOs.listar();
+                    if(almacen != null){
+                        for (almacen a : almacen) {
                 %>
                 <tr>
-                    <td data-label="id_producto"><%=producto.getId_producto() %></td>
-                    <td data-label="nombre_producto"><%=producto.getNombre_producto() %></td>
-                    <td data-label="id_descripcion"><%=producto.getId_descripcion() %></td>
-                    <td data-label="id_categoria"><%=producto.getId_categoria()%></td>
-                    <td data-label="precio"><%=producto.getPrecio() %></td>
+                    <td data-label="id_producto"><%=a.getId_producto() %></td>
+                    <td data-label="cantidad"><%=a.getCantidad() %></td>
+                    <td data-label="estatus"><%=a.isEstatus() %></td>
                 </tr>
                 <%
                         }
@@ -93,26 +89,22 @@
 
 
         <form action = "<%= request.getContextPath()%>/SvAddProducto"  class="form-register" method="post">
-            <h4>Agregar producto</h4>
-            <input class ="controls" type="text" name="nombre_producto" id="nombre_producto" placeholder="Nombre del producto" required>
-            <h5>id_descripcion</h5>
-            <select id="id_descripcion" name="id_descripcion" class="controls" required>
-                <option value="1">Negra, Mediana, Poliester</option>
-                <option value="2">Blanca, Grande, Algodon</option>
+            <h4>Modificar cantidad y estatus</h4>
+            <h5>id_producto</h5>
+            <select id="id_producto" name="id_producto" class="controls" required>
+                <option value="1">1. Camiseta personalizada</option>
+                <option value="2">2. Playera personalizada</option>
             </select>
-            <h5>id_categoria</h5>
-            <select id="id_categoria" name="id_categoria" class="controls" required>
-                <option value="1">SlimFit</option>
-                <option value="2">MuscleFit</option>
-                <option value="3">RelaxedFit</option>
-                <option value="4">VintageFit</option>
+            <h5>cantidad</h5>
+            <input class ="controls" type="text" name="cantidad" id="cantidad" placeholder="Ingresa la cantidad" required>
+            <select id="estatus" name="estatus" class="controls" required>
+                <option value="true">Activar</option>
+                <option value="false">Desactivar</option>
             </select>
-            <input class ="controls" type="text" name="precio" id="precio" placeholder="Ingresa el precio" required>
-            <button class="botons" type="submit">Agregar producto</button>
         </form>
         <%
-        String mensajeExito = (String) request.getAttribute("mensajeExito");
-        if (mensajeExito != null) {
+            String mensajeExito = (String) request.getAttribute("mensajeExito");
+            if (mensajeExito != null) {
         %>
         <p>Producto agregado correctamente.</p>
 
