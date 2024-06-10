@@ -65,6 +65,7 @@
     %>
     <section>
       <h2>Informacion de cuenta</h2>
+      <h3>Informacion de la cuenta de administrador actual</h3>
       <form action = "#"  class="form-register">
         <label for="id_usuario">id_usuario: </label>
         <input class = 'controls' type="number" name="id_usuario" id="id_usuario" value="<%=usuario.getId_usuario()%>" required readonly>
