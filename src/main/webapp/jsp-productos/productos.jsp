@@ -43,7 +43,7 @@
 
             <ul class="lista">
                 <li><a class = "active" href="<%= request.getContextPath()%>/jsp-productos/productos.jsp">Playeras</a> </li>
-                <li><a href="<%= request.getContextPath()%>/jsp-productos/playeras-deportivas.jsprtivas.jsp">Playeras deportivas</a> </li>
+                <li><a href="<%= request.getContextPath()%>/jsp-productos/playeras-deportivas.jsp">Playeras deportivas</a> </li>
                 <li><a href="<%= request.getContextPath()%>/jsp-admin/identificar-usuario.jsp">Playeras oversize</a></li>
             </ul>
 

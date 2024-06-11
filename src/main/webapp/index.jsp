@@ -13,7 +13,7 @@
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
-                <li><a href="<%= request.getContextPath()%>/jsp-usuario/productos.jsp">Productos</a></li>
+                <li><a href="<%= request.getContextPath()%>/jsp-productos/productos.jsp">Productos</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contacto</a></li>
                 <%

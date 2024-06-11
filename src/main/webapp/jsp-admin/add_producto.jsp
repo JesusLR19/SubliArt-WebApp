@@ -2,6 +2,9 @@
 <%@ page import="Modelo.usuarios" %>
 <%@ page import="Datos.productosDAO" %>
 <%@ page import="Modelo.productos" %>
+<%@page import ="Datos.descripcionDAO"%>
+<%@ page import="Modelo.descripcion_producto" %>
+
 <%@ page import ="java.io.*, java.util.*"%>
 <%
     HttpSession sessionActive = request.getSession(false);
@@ -97,10 +100,17 @@
             <input class ="controls" type="text" name="nombre_producto" id="nombre_producto" placeholder="Nombre del producto" required>
             <h5>id_descripcion</h5>
             <select id="id_descripcion" name="id_descripcion" class="controls" required>
+                <%
+                    descripcionDAO descripcionDAO = new descripcionDAO();
+                    List<descripcion_producto> descripciones = descripcionDAO.listar();
+                    if(descripciones != null){
+                        for (descripcion_producto descripcion : descripciones) {
+                %>
                 <option value="1">Negra, Mediana, Poliester</option>
                 <option value="2">Blanca, Grande, Algodon</option>
             </select>
             <h5>id_categoria</h5>
+            <% %>
             <select id="id_categoria" name="id_categoria" class="controls" required>
                 <option value="1">SlimFit</option>
                 <option value="2">MuscleFit</option>
