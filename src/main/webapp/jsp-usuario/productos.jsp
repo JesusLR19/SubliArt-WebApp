@@ -42,8 +42,8 @@
         <aside>
 
             <ul class="lista">
-                <li><a class = "active" href="<%= request.getContextPath()%>/jsp-admin/inicio-admin.jsp">Playeras</a> </li>
-                <li><a href="<%= request.getContextPath()%>/jsp-admin/listar-usuarios.jsp">Playeras deportivas</a> </li>
+                <li><a class = "active" href="<%= request.getContextPath()%>/jsp-usuario/productos.jsp">Playeras</a> </li>
+                <li><a href="<%= request.getContextPath()%>/jsp-usuario/playeras-deportivas.jsp">Playeras deportivas</a> </li>
                 <li><a href="<%= request.getContextPath()%>/jsp-admin/identificar-usuario.jsp">Playeras oversize</a></li>
             </ul>
 
@@ -55,6 +55,7 @@
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/negra_corte_normal.jpg" alt="Foto de Cuzco" width="500">
                 <h2>Basica negra</h2>
+                <h3>$150</h3>
                 <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
                     <button>Agregar al carrito</button>
@@ -64,6 +65,7 @@
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/blanca_corte_normal.jpg" alt="Foto de Cuzco" width="500">
                 <h2>Basica blanca</h2>
+                <h3>$150</h3>
                 <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
                     <button formaction="" formmethod="">Agregar al carrito</button>
@@ -73,6 +75,7 @@
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/kaki_corte_normal.jpg" alt="Foto de Cuzco" width="500">
                 <h2>Basica caqui</h2>
+                <h3>$150</h3>
                 <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
                     <button>Agregar al carrito</button>
@@ -82,6 +85,7 @@
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/gris_corte_normal.jpg" alt="Foto de Cuzco" width="500">
                 <h2>Basica gris</h2>
+                <h3>$150</h3>
                 <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
                     <button>Agregar al carrito</button>
@@ -91,6 +95,7 @@
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/rosa_corte_normal.jpg" alt="Foto de Cuzco" width="500">
                 <h2>Basica rosa</h2>
+                <h3>$150</h3>
                 <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
                     <button>Agregar al carrito</button>
@@ -100,6 +105,7 @@
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/vino_corte_normal.jpg" alt="Foto de Cuzco" width="500">
                 <h2>Basica vino</h2>
+                <h3>$150</h3>
                 <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
                     <button>Agregar al carrito</button>
@@ -109,6 +115,7 @@
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/roja_corte_normal.jpg" alt="Foto de Cuzco" width="500">
                 <h2>Basica roja</h2>
+                <h3>$150</h3>
                 <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
                     <button>Agregar al carrito</button>
@@ -118,6 +125,7 @@
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/blanca_corte_normal.jpg" alt="Foto de Cuzco" width="500">
                 <h2>DTF Textil</h2>
+                <h3>$150</h3>
                 <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
                     <button>Agregar al carrito</button>
