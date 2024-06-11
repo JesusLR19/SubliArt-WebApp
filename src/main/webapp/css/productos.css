@@ -1,0 +1,74 @@
+.products-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.product-card {
+    flex: 1 1 calc(25% - 20px);
+    background: #f1f1f1;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    margin: 10px 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h2 {
+    padding: 10px;
+}
+
+.product-card p {
+    margin: 0 10px 10px;
+    text-align: justify;
+    padding: 10px;
+    line-height: 1.4;
+}
+
+.product-card .button-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.product-card button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #0056b3;
+}
+
+@media only screen and (max-width: 1024px) {
+    .product-card {
+        flex: 1 1 calc(33.333% - 20px); /* Tres elementos por fila */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .product-card {
+        flex: 1 1 calc(50% - 20px); /* Dos elementos por fila */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .product-card {
+        flex: 1 1 calc(100% - 20px); /* Un elemento por fila */
+        margin: 10px 0;
+    }
+}
