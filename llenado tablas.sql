@@ -38,7 +38,7 @@ INSERT INTO productos (nombre_producto, id_descripcion, id_categoria, precio) VA
     ('Oversize-hueso', 3, 4, 200),
     ('Oversize-cafe', 3, 4, 200),
     ('Oversize-gris', 3, 4, 200),
-    ('Oversize-vino', 3, 4, 200),
+    ('Oversize-vino', 3, 4, 200);
 
 
 INSERT INTO pedidos (id_usuario, total_productos, total_mxn, estatus) VALUES
@@ -46,5 +46,19 @@ INSERT INTO pedidos (id_usuario, total_productos, total_mxn, estatus) VALUES
     (1, 1, 699.99, true);
 
 INSERT INTO almacen (id_producto, cantidad, estatus) VALUES
-    (1, 50, true),
-    (2, 30, true);
+    (1, 5, true),
+    (2, 5, true),
+    (3, 5, true),
+    (4, 5, true),
+    (5, 5, true),
+    (6, 5, true),
+    (7, 5, true),
+    (8, 5, true),
+    (9, 5, true),
+    (10, 5, true),
+    (11, 5, true),
+    (12, 5, true),
+    (13, 5, true),
+    (14, 5, true),
+    (15, 5, true),
+    (16, 5, true);

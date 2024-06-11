@@ -68,7 +68,7 @@
             <h3>$150</h3>
             <p>La mejor playera deportiva con tecnología dry tech para hombre , nuestra nueva línea deportiva de manga larga es un producto básico, tanto para el uso personal como para uniformar o promocionar tu equipo.</p>
             <div class="button-container">
-                <button formaction="" formmethod="">Agregar al carrito</button>
+                <button formaction="" formmethod="post">Agregar al carrito</button>
             </div>
         </div>
 
