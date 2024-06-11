@@ -68,9 +68,9 @@
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 580px) {
     .product-card {
-        flex: 1 1 calc(100% - 20px); /* Un elemento por fila */
+        flex: 1 1 calc(100% - 20px); /* Una tarjeta por fila */
         margin: 10px 0;
     }
 }
