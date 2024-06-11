@@ -54,8 +54,8 @@
         <section class="products-section">
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/negra_corte_normal.jpg" alt="Foto de Cuzco" width="500">
-                <h2>Playera basica negra</h2>
-                <p>El DTF textil revoluciona la personalización textil. Imprimiendo primero en una película especial, se transfiere el diseño a la prenda mediante calor y presión. Esta técnica ofrece gran versatilidad, permitiendo estampar en telas de cualquier color y material.</p>
+                <h2>Basica negra</h2>
+                <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
                     <button>Agregar al carrito</button>
                 </div>
@@ -63,17 +63,17 @@
 
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/blanca_corte_normal.jpg" alt="Foto de Cuzco" width="500">
-                <h2>Playera basica blanca</h2>
-                <p>El DTF textil revoluciona la personalización textil. Imprimiendo primero en una película especial, se transfiere el diseño a la prenda mediante calor y presión. Esta técnica ofrece gran versatilidad, permitiendo estampar en telas de cualquier color y material.</p>
+                <h2>Basica blanca</h2>
+                <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
-                    <button>Agregar al carrito</button>
+                    <button formaction="" formmethod="">Agregar al carrito</button>
                 </div>
             </div>
 
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/kaki_corte_normal.jpg" alt="Foto de Cuzco" width="500">
-                <h2>DTF Textil</h2>
-                <p>El DTF textil revoluciona la personalización textil. Imprimiendo primero en una película especial, se transfiere el diseño a la prenda mediante calor y presión. Esta técnica ofrece gran versatilidad, permitiendo estampar en telas de cualquier color y material.</p>
+                <h2>Basica caqui</h2>
+                <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
                     <button>Agregar al carrito</button>
                 </div>
@@ -81,8 +81,8 @@
 
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/gris_corte_normal.jpg" alt="Foto de Cuzco" width="500">
-                <h2>DTF Textil</h2>
-                <p>El DTF textil revoluciona la personalización textil. Imprimiendo primero en una película especial, se transfiere el diseño a la prenda mediante calor y presión. Esta técnica ofrece gran versatilidad, permitiendo estampar en telas de cualquier color y material.</p>
+                <h2>Basica gris</h2>
+                <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
                     <button>Agregar al carrito</button>
                 </div>
@@ -90,8 +90,8 @@
 
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/rosa_corte_normal.jpg" alt="Foto de Cuzco" width="500">
-                <h2>DTF Textil</h2>
-                <p>El DTF textil revoluciona la personalización textil. Imprimiendo primero en una película especial, se transfiere el diseño a la prenda mediante calor y presión. Esta técnica ofrece gran versatilidad, permitiendo estampar en telas de cualquier color y material.</p>
+                <h2>Basica rosa</h2>
+                <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
                     <button>Agregar al carrito</button>
                 </div>
@@ -99,8 +99,17 @@
 
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/vino_corte_normal.jpg" alt="Foto de Cuzco" width="500">
-                <h2>DTF Textil</h2>
-                <p>El DTF textil revoluciona la personalización textil. Imprimiendo primero en una película especial, se transfiere el diseño a la prenda mediante calor y presión. Esta técnica ofrece gran versatilidad, permitiendo estampar en telas de cualquier color y material.</p>
+                <h2>Basica vino</h2>
+                <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
+                <div class="button-container">
+                    <button>Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="<%= request.getContextPath()%>/img-productos/roja_corte_normal.jpg" alt="Foto de Cuzco" width="500">
+                <h2>Basica roja</h2>
+                <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
                     <button>Agregar al carrito</button>
                 </div>
@@ -109,16 +118,7 @@
             <div class="product-card">
                 <img src="<%= request.getContextPath()%>/img-productos/blanca_corte_normal.jpg" alt="Foto de Cuzco" width="500">
                 <h2>DTF Textil</h2>
-                <p>El DTF textil revoluciona la personalización textil. Imprimiendo primero en una película especial, se transfiere el diseño a la prenda mediante calor y presión. Esta técnica ofrece gran versatilidad, permitiendo estampar en telas de cualquier color y material.</p>
-                <div class="button-container">
-                    <button>Agregar al carrito</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="<%= request.getContextPath()%>/img-productos/blanca_corte_normal.jpg" alt="Foto de Cuzco" width="500">
-                <h2>DTF Textil</h2>
-                <p>El DTF textil revoluciona la personalización textil. Imprimiendo primero en una película especial, se transfiere el diseño a la prenda mediante calor y presión. Esta técnica ofrece gran versatilidad, permitiendo estampar en telas de cualquier color y material.</p>
+                <p>Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.</p>
                 <div class="button-container">
                     <button>Agregar al carrito</button>
                 </div>
