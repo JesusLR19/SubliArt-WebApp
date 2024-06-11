@@ -42,9 +42,9 @@
     <aside>
 
         <ul class="lista">
-            <li><a href="<%= request.getContextPath()%>/jsp-productos/productos.jsp">Playeras</a> </li>
-            <li><a class = "active" href="<%= request.getContextPath()%>/jsp-productos/playeras-deportivas.jsp">Playeras deportivas</a> </li>
-            <li><a href="<%= request.getContextPath()%>/jsp-productos/playeras-oversize.jsp">Playeras oversize</a></li>
+            <li><a href="<%= request.getContextPath()%>/jsp-productos/productos.jspductos.jsp">Playeras</a> </li>
+            <li><a href="<%= request.getContextPath()%>/jsp-productos/playeras-deportivas.jsp">Playeras deportivas</a> </li>
+            <li><a class = "active" href="<%= request.getContextPath()%>/jsp-productos/playeras-oversize.jsp">Playeras oversize</a></li>
         </ul>
 
 

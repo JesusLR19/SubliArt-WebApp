@@ -33,7 +33,7 @@ create table if not exists usuarios(
 
 create table if not exists descripcion_producto(
 	id_descripcion serial primary key,
-	color varchar(50) not null,
+	descripcion text not null,
 	talla varchar(50) not null,
 	material varchar(50) not null
 );

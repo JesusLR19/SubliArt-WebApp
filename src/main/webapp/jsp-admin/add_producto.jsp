@@ -106,7 +106,7 @@
                     if(descripciones != null){
                         for (descripcion_producto descripcion : descripciones) {
                 %>
-                <option value="<%descripcion.getId_descripcion();%>"><%=descripcion.getColor()%>, <%=descripcion.getTalla()%>, <%=descripcion.getMaterial()%></option>
+                <option value="<%descripcion.getId_descripcion();%>"><%=descripcion.getId_descripcion()%>. <%=descripcion.getColor()%>, <%=descripcion.getTalla()%>, <%=descripcion.getMaterial()%></option>
                 <%
                         }
                     }
@@ -121,7 +121,7 @@
                     if(categorias != null){
                         for (categoria_producto categoria : categorias) {
                 %>
-                <option value="<%categoria.getId_categoria();%>"><%=categoria.getNombre_categoria()%></option>
+                <option value="<%categoria.getId_categoria();%>"><%=categoria.getId_categoria()%>. <%=categoria.getNombre_categoria()%></option>
                 <%
                         }
                     }
