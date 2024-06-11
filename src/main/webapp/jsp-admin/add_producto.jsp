@@ -1,11 +1,11 @@
 <%@ page import="Datos.usuariosDAO" %>
-<%@ page import="Modelo.usuarios" %>
 <%@ page import="Datos.productosDAO" %>
 <%@ page import="Modelo.productos" %>
 <%@page import ="Datos.descripcionDAO"%>
 <%@ page import="Modelo.descripcion_producto" %>
-
-<%@ page import ="java.io.*, java.util.*"%>
+<%@ page import="Modelo.categoria_producto" %>
+<%@ page import="Datos.categoriaDAO" %>
+<%@ page import ="java.util.*"%>
 <%
     HttpSession sessionActive = request.getSession(false);
     String usernameA = (String) sessionActive.getAttribute("username");
@@ -106,17 +106,28 @@
                     if(descripciones != null){
                         for (descripcion_producto descripcion : descripciones) {
                 %>
-                <option value="1">Negra, Mediana, Poliester</option>
-                <option value="2">Blanca, Grande, Algodon</option>
+                <option value="<%descripcion.getId_descripcion();%>"><%=descripcion.getColor()%>, <%=descripcion.getTalla()%>, <%=descripcion.getMaterial()%></option>
+                <%
+                        }
+                    }
+                %>
             </select>
             <h5>id_categoria</h5>
             <% %>
             <select id="id_categoria" name="id_categoria" class="controls" required>
-                <option value="1">SlimFit</option>
-                <option value="2">MuscleFit</option>
-                <option value="3">RelaxedFit</option>
-                <option value="4">VintageFit</option>
+                <%
+                    categoriaDAO categoriaDAO = new categoriaDAO();
+                    List<categoria_producto> categorias = categoriaDAO.listar();
+                    if(categorias != null){
+                        for (categoria_producto categoria : categorias) {
+                %>
+                <option value="<%categoria.getId_categoria();%>"><%=categoria.getNombre_categoria()%></option>
+                <%
+                        }
+                    }
+                %>
             </select>
+
             <input class ="controls" type="text" name="precio" id="precio" placeholder="Ingresa el precio" required>
             <button class="botons" type="submit">Agregar producto</button>
         </form>
