@@ -6,15 +6,15 @@ public class descripcion_producto implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private int id_descripcion;
-    private String color;
+    private String descripcion;
     private String talla;
     private String material;
 
     public descripcion_producto(){}
 
-    public descripcion_producto(int id_descripcion, String color, String talla, String material) {
+    public descripcion_producto(int id_descripcion, String descripcion, String talla, String material) {
         this.id_descripcion = id_descripcion;
-        this.color = color;
+        this.descripcion = descripcion;
         this.talla = talla;
         this.material = material;
     }
@@ -27,12 +27,12 @@ public class descripcion_producto implements Serializable {
         this.id_descripcion = id_descripcion;
     }
 
-    public String getColor() {
-        return color;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getTalla() {

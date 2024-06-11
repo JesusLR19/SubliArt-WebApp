@@ -21,11 +21,11 @@ public class descripcionDAO {
 
             while (rs.next()){
                 int id_descripcion = rs.getInt("id_descripcion");
-                String color = rs.getString("color");
+                String descripcion = rs.getString("descripcion");
                 String talla = rs.getString("talla");
                 String material = rs.getString("material");
 
-                descripcion_producto add_descripcion = new descripcion_producto(id_descripcion,color,talla,material);
+                descripcion_producto add_descripcion = new descripcion_producto(id_descripcion,descripcion,talla,material);
                 descripciones.add(add_descripcion);
             }
         }catch (Exception e){
@@ -43,9 +43,9 @@ public class descripcionDAO {
 
         try {
             conn = Conexion.getConnection();
-            ps = conn.prepareStatement("INSERT INTO descripcion_producto (color,talla,material) VALUES (?,?,?)");
+            ps = conn.prepareStatement("INSERT INTO descripcion_producto (descripcion,talla,material) VALUES (?,?,?)");
 
-            ps.setString(1,descripcion.getColor());
+            ps.setString(1,descripcion.getDescripcion());
             ps.setString(2,descripcion.getTalla());
             ps.setString(3,descripcion.getMaterial());
             ps.executeUpdate();

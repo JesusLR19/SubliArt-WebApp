@@ -12,19 +12,19 @@ import Modelo.categoria_producto;
 public class Main_productos {
     public static void main(String[] args) {
 
-/*        productosDAO dao = new productosDAO();
+        productosDAO dao = new productosDAO();
         descripcionDAO descripcionDAO = new descripcionDAO();
         List<descripcion_producto> descripciones = descripcionDAO.listar();
         if (descripciones != null) {
             for (descripcion_producto descripcion : descripciones) {
                 System.out.println(descripcion.getId_descripcion());
-                System.out.println(descripcion.getColor());
+                System.out.println(descripcion.getDescripcion());
                 System.out.println(descripcion.getTalla());
                 System.out.println(descripcion.getMaterial());
             }
-        }*/
+        }
 
-        categoriaDAO cdao = new categoriaDAO();
+/*        categoriaDAO cdao = new categoriaDAO();
         List<categoria_producto> categorias = cdao.listar();
         if (categorias != null) {
             for (categoria_producto producto : categorias) {
@@ -32,7 +32,7 @@ public class Main_productos {
                 System.out.println(producto.getNombre_categoria());
 
             }
-        }
+        }*/
 
             //almacenDAO almacenDAOs = new almacenDAO();
 //        List<almacen> almacen = almacenDAOs.listar();

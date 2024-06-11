@@ -104,9 +104,9 @@
                     descripcionDAO descripcionDAO = new descripcionDAO();
                     List<descripcion_producto> descripciones = descripcionDAO.listar();
                     if(descripciones != null){
-                        for (descripcion_producto descripcion : descripciones) {
+                        for (descripcion_producto desc : descripciones) {
                 %>
-                <option value="<%descripcion.getId_descripcion();%>"><%=descripcion.getId_descripcion()%>. <%=descripcion.getColor()%>, <%=descripcion.getTalla()%>, <%=descripcion.getMaterial()%></option>
+                <option value="<%desc.getId_descripcion();%>"><%=desc.getId_descripcion()%>. <%=desc.getTalla()%>, <%=desc.getMaterial()%></option>
                 <%
                         }
                     }

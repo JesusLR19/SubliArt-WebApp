@@ -6,7 +6,7 @@ import org.apache.commons.dbcp2.BasicDataSource;
 public class Conexion {
     private static String user = "postgres";
     private static String password = "211910"; //colocar la contraseña que tenga en su sgbd
-    private static String bd = "Subli-Art"; //colocar el nombre con el que hicieron su bd con los scripts
+    private static String bd = "SubliArt"; //colocar el nombre con el que hicieron su bd con los scripts
     private static String server = "jdbc:postgresql://localhost:5432/" + bd;
     private static String driver = "org.postgresql.Driver";
 

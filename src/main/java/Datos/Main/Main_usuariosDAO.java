@@ -11,7 +11,7 @@ public class Main_usuariosDAO {
 //        for (usuarios usuario : usuarios) {
 //            System.out.println(usuario.getUsername());
 //        }
-        usuarios usu = new usuarios();
+        //usuarios usu = new usuarios();
         //usuarioDAO.agregarAdmin(usu);
 
         //String username = "ichuchex";

@@ -10,13 +10,13 @@ INSERT INTO usuarios (nombre, apellido_p, apellido_m, username, password, id_con
     ('Jesus Eduardo', 'Lopez', 'Rodriguez', 'jesuslr', '12345', 1, 1, true),
     ('Holly Abigail', 'Huerta', 'Prado', 'hollycg', '12345', 2, 2, true);
 
-INSERT INTO descripcion_producto (color, talla, material) VALUES
+INSERT INTO descripcion_producto (descripcion, talla, material) VALUES
     ('Confort,durabilidad y resistencia al mejor precio del mercado,si buscas una playera básica para serigrafía,bordado o cualquier otro proceso de decorado,estás en el lugar correcto.', 'M','100% Algodon'),
     ('La mejor playera deportiva con tecnología dry tech para hombre , nuestra nueva línea deportiva de manga larga es un producto básico, tanto para el uso personal como para uniformar o promocionar tu equipo.', 'M','100% Poliester'),
     ('Prueba nuestro fit con ajuste relajado y mangas holgadas, que te brindan mayor movilidad y estilo. Descubre el estilo sin límites con nuestros nuevos fit oversize. Con los mejores diseños y comodidad incomparable, nuestros fit oversize son la elección perfecta para destacar tu individualidad.', 'M','100% Algodon');
 
 INSERT INTO categoria_producto (nombre_categoria, descripcion) VALUES
-    ('Basica', 'Camiseta clasica medio holgada')
+    ('Basica', 'Camiseta clasica medio holgada'),
     ('SlimFit', 'Camiseta clasica espalda ancha y cadera estrecha'),
     ('MuscleFit', 'Marcar mejor la musculatura del individuo'),
     ('RelaxedFit', 'La mejor version para comodidad'),
@@ -30,7 +30,7 @@ INSERT INTO productos (nombre_producto, id_descripcion, id_categoria, precio) VA
     ('Basica-rosa', 1, 1, 150),
     ('Basica-vino', 1, 1, 150),
     ('Basica-roja', 1, 1, 150),
-    ('Basica-azul', 1, 1, 150);
+    ('Basica-azul', 1, 1, 150),
     ('Deportiva-blanca', 2, 2, 200),
     ('Deportiva-carbon', 2, 2, 200),
     ('Deportiva-negra', 2, 2, 200),
