@@ -28,7 +28,7 @@ public class Main_productos {
 //        }
 
         vistaProductosDAO vistaProductosDAO = new vistaProductosDAO();
-        List<vistaProductos> productos = vistaProductosDAO.listar();
+        List<vistaProductos> productos = vistaProductosDAO.listarBasicas();
         if (productos != null) {
             for (vistaProductos producto : productos) {
                 System.out.println(producto.getId_producto());

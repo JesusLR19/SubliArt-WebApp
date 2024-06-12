@@ -1,6 +1,6 @@
 <%@ page import="Datos.usuariosDAO" %>
 <%@ page import="Modelo.usuarios" %>
-<%@ page import ="java.io.*, java.util.*"%>
+<%@ page import ="java.util.*"%>
 <%
     HttpSession sessionActive = request.getSession(false);
     String usernameA = (String) sessionActive.getAttribute("username");

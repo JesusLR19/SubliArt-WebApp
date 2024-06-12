@@ -6,7 +6,7 @@ import java.util.List;
 
 public class vistaProductosDAO {
 
-    public List<vistaProductos> listar(){
+    public List<vistaProductos> listarBasicas(){
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -14,7 +14,7 @@ public class vistaProductosDAO {
         List<vistaProductos> lista_productos = new ArrayList<>();
         try {
             conn = Conexion.getConnection();
-            ps = conn.prepareStatement("SELECT * FROM vista_productos ORDER BY id_producto ASC ");
+            ps = conn.prepareStatement("SELECT * FROM vista_productos WHERE categoria ='Basica' ORDER BY id_producto ASC ");
             rs = ps.executeQuery();
 
             while (rs.next()){
