@@ -1,7 +1,7 @@
 <%@ page import="Datos.usuariosDAO" %>
 <%@ page import="Modelo.usuarios" %>
-<%@ page import="Modelo.pedidos" %>
-<%@ page import="Datos.pedidosDAO" %>
+<%@ page import="Modelo.contacto" %>
+<%@ page import="Datos.contactoDAO" %>
 <%@ page import="java.util.List" %>
 <%--
   Created by IntelliJ IDEA.
@@ -64,6 +64,45 @@
     %>
     <section>
         <h2>Agregar direccion</h2>
+
+        <div class="container">
+            <table class="table">
+                <caption>Direccion predeterminada</caption>
+                <thead>
+                <tr>
+                    <th>calle</th>
+                    <th>numero</th>
+                    <th>colonia</th>
+                    <th>cp</th>
+                    <th>referencias</th>
+                    <th>num_telefonico</th>
+                </tr>
+                </thead>
+                <tbody>
+                <%
+                    contactoDAO contactoDAOs = new contactoDAO();
+                    List<contacto> direccion = contactoDAOs.obtenerById(usuario.getId_contacto());
+                    if(direccion != null){
+                        for (contacto dir : direccion) {
+                %>
+                <tr>
+                    <td data-label="calle"><%=dir.getCalle() %></td>
+                    <td data-label="numero"><%=dir.getNumero() %></td>
+                    <td data-label="colonia"><%=dir.getColonia() %></td>
+                    <td data-label="cp"><%=dir.getCp() %></td>
+                    <td data-label="referencias"><%=dir.getReferencias() %></td>
+                    <td data-label="num_telefonico"><%=dir.getNum_telefonico() %></td>
+                </tr>
+                <%
+                        }
+                    }
+                %>
+
+
+                </tbody>
+            </table>
+        </div>
+
         <h3>Ingresa todos los datos de contacto</h3>
         <form action="<%= request.getContextPath()%>/SvAgregarDireccion" class="form-register" method="post">
             <h4>Agregar información de contacto</h4>

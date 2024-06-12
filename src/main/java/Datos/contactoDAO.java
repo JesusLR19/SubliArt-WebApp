@@ -92,7 +92,7 @@ public class contactoDAO {
         }
         return id_contacto;
     }
-    public List<contacto> listarByNum_tel(String num_tel){
+    public List<contacto> obtenerById(int idcontacto){
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -101,8 +101,8 @@ public class contactoDAO {
 
         try{
             conn = Conexion.getConnection();
-            ps = conn.prepareStatement("SELECT * FROM contacto WHERE num_telefonico =?");
-            ps.setString(1, num_tel);
+            ps = conn.prepareStatement("SELECT * FROM contacto WHERE id_contacto =?");
+            ps.setInt(1, idcontacto);
             rs = ps.executeQuery();
 
             while (rs.next()){

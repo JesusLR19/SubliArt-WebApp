@@ -13,7 +13,7 @@ public class Main_pruebas {
 //        contactoDAO.agregarContacto(contacto);
 //        usuariosDAO usuariosDAO = new usuariosDAO();
 //        usuariosDAO.updateContacto(3,1);
-        List<contacto> contactoList = contactoDAO.listarByNum_tel("0123456789");
+        List<contacto> contactoList = contactoDAO.obtenerById(1);
         for (contacto contacto : contactoList) {
             System.out.println(contacto.getCalle());
         }
