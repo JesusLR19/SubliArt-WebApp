@@ -65,7 +65,7 @@ usuariosDAO usuarioDAO = new usuariosDAO();
             if (msgFailed != null) {
         %>
         <p>No se pudo cambiar la contraseña.</p>
-
+        <p style = "color: red">Error:contraseña anterior incorrecta.</p>
         <% } %>
 
     </section>

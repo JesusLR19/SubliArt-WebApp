@@ -52,7 +52,7 @@ public class usuariosDAO {
             conn = Conexion.getConnection();
             ps = conn.prepareStatement("SELECT * FROM usuarios WHERE id_usuario=?");
             ps.setInt(1,idUsuario);
-            ps.executeQuery();
+            rs = ps.executeQuery();
 
             if (rs.next()){
                 int id_usuario = rs.getInt("id_usuario");

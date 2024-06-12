@@ -30,10 +30,6 @@ public class SvCambiarPswdUsu extends HttpServlet {
                     request.setAttribute("mensajeExito", "mensajeExito");
                     RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp-usuario/cambiar-password.jsp");
                     dispatcher.forward(request, response);
-                }else {
-                    request.setAttribute("msgFailed", "msgFailed");
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp-usuario/cambiar-password.jsp");
-                    dispatcher.forward(request, response);
                 }
             }else {
                 request.setAttribute("msgFailed", "msgFailed");
