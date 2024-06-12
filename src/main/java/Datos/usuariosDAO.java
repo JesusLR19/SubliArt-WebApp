@@ -324,6 +324,34 @@ public class usuariosDAO {
         }
         return id_rol;
     }
+    public int getIdByUsername(String username){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        int id_usuario = 0;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("SELECT id_usuario FROM usuarios WHERE username =?");
+            ps.setString(1, username);
+            rs = ps.executeQuery();
+
+            if(rs.next()){
+
+                 id_usuario = rs.getInt("id_usuario");
+
+/*                if(id_rol > 0){
+                    System.out.println("Rol obtenido con exito");
+                }else{
+                    System.out.println("Rol no encontrado");
+                }*/
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return id_usuario;
+    }
+
     public int desactivarUsuario(String username) {
         Connection conn = null;
         PreparedStatement ps = null;

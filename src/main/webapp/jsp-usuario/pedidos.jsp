@@ -1,5 +1,8 @@
 <%@ page import="Datos.usuariosDAO" %>
 <%@ page import="Modelo.usuarios" %>
+<%@ page import="Modelo.pedidos" %>
+<%@ page import="Datos.pedidosDAO" %>
+<%@ page import="java.util.List" %>
 <%--
   Created by IntelliJ IDEA.
   User: Dell Latitude
@@ -60,7 +63,48 @@
     <section>
         <h2>Informacion general de tus pedidos</h2>
         <h3>En este apartado se encuentran todos tus pedidos</h3>
+        <div class="container">
+            <table class="table">
+                <caption>Usuarios Activados</caption>
+                <thead>
+                <tr>
+                    <th>id_usuario</th>
+                    <th>Nombre</th>
+                    <th>ApellidoP</th>
+                    <th>ApellidoM</th>
+                    <th>Username</th>
+                    <th>id_contacto</th>
+                    <th>id_rol</th>
+                    <th>Estatus</th>
+                </tr>
+                </thead>
+                <tbody>
+                <%
+                    int usuario_id = usuarioDAO.getIdByUsername(usernameA);
+                    pedidosDAO pedidosDAO = new pedidosDAO();
+                    List<pedidos> pedidos = pedidosDAO.listarPorUsuario(usuario_id);
+                    if(pedidos != null){
+                        for (pedidos pedido : pedidos) {
+                %>
+                <tr>
+                    <td data-label="id_usuario"><%=usuario.getId_usuario() %></td>
+                    <td data-label="Nombre"><%=usuario.getNombre() %></td>
+                    <td data-label="ApellidoP"><%=usuario.getApellido_p() %></td>
+                    <td data-label="ApellidoM"><%=usuario.getApellido_m() %></td>
+                    <td data-label="Username"><%=usuario.getUsername() %></td>
+                    <td data-label="id_contacto"><%=usuario.getId_contacto() %></td>
+                    <td data-label="id_rol"><%=usuario.getId_rol() %></td>
+                    <td data-label="id_rol"><%=usuario.isEstatus() %></td>
+                </tr>
+                <%
+                        }
+                    }
+                %>
 
+
+                </tbody>
+            </table>
+        </div>
 
 
 

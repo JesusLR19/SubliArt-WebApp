@@ -11,6 +11,8 @@ import Datos.categoriaDAO;
 import Modelo.categoria_producto;
 import Modelo.vistaProductos;
 import Datos.vistaProductosDAO;
+import Modelo.pedidos;
+import Datos.pedidosDAO;
 
 public class Main_productos {
     public static void main(String[] args) {
@@ -27,16 +29,27 @@ public class Main_productos {
 //            }
 //        }
 
-        vistaProductosDAO vistaProductosDAO = new vistaProductosDAO();
-        List<vistaProductos> productos = vistaProductosDAO.listarBasicas();
-        if (productos != null) {
-            for (vistaProductos producto : productos) {
-                System.out.println(producto.getId_producto());
-                System.out.println(producto.getNombre_producto());
-                System.out.println(producto.getDescripcion());
-                System.out.println(producto.getCategoria());
-                System.out.println(producto.getPrecio());
-                System.out.println("------------------------");
+//        vistaProductosDAO vistaProductosDAO = new vistaProductosDAO();
+//        List<vistaProductos> productos = vistaProductosDAO.listarBasicas();
+//        if (productos != null) {
+//            for (vistaProductos producto : productos) {
+//                System.out.println(producto.getId_producto());
+//                System.out.println(producto.getNombre_producto());
+//                System.out.println(producto.getDescripcion());
+//                System.out.println(producto.getCategoria());
+//                System.out.println(producto.getPrecio());
+//                System.out.println("------------------------");
+//            }
+//        }
+
+        pedidosDAO pedidosDAO = new pedidosDAO();
+        List<pedidos> pedidos = pedidosDAO.listarPorUsuario(1);
+        if (pedidos != null) {
+            for (pedidos pedido : pedidos) {
+                System.out.println(pedido.getId_pedido());
+                System.out.println(pedido.getTotal_productos());
+                System.out.println(pedido.getTotal_mxn());
+                System.out.println(pedido.isEstatus());
             }
         }
 

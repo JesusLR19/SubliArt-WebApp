@@ -24,12 +24,12 @@
                     if (sessionActive != null && sessionActive.getAttribute("username") != null) {
                         String username = (String) sessionActive.getAttribute("username");
                 %>
-                <li class="login"><a href="#">Bienvenido <%= username %> </a></li>
+                <li class="login"><a href="<%= request.getContextPath()%>/jsp-usuario/panel-usuario.jsp">Bienvenido <%= username %> </a></li>
                 <li class="login"><a href="<%= request.getContextPath()%>/SvLogout">Cerrar sesion</a></li>
                 <%
                     }else {
                 %>
-                <li class="login"><a href="<%= request.getContextPath()%>jsp/login.jsp">Iniciar sesion</a></li>
+                <li class="login"><a href="<%= request.getContextPath()%>/jsp/login.jsp">Iniciar sesion</a></li>
                 <%
                     }
                 %>

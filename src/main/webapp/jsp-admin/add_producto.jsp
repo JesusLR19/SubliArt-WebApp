@@ -57,6 +57,7 @@
 
     <section>
         <h2>Lista de productos</h2>
+        <h3>Nota:El nombre que coloques al producto debe coincidir con el nombre del archivo .jpg/.png a subir para su presentacion.</h3>
 
         <div class="container">
             <table class="table">
