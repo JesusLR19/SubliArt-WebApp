@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ page import="Datos.usuariosDAO" %>
+<%@ page import="Modelo.vistaProductos" %>
+<%@ page import="Datos.vistaProductosDAO" %>
+<%@ page import ="java.util.*"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,45 +55,25 @@
 
 
     <section class="products-section">
+        <%
+            vistaProductosDAO vistaProductosDAO = new vistaProductosDAO();
+            List<vistaProductos> productos = vistaProductosDAO.listarSlimFit();
+            if (productos != null) {
+                for (vistaProductos producto : productos) {
+        %>
         <div class="product-card">
-            <img src="<%= request.getContextPath()%>/img-productos/blanca_deportiva.jpg" alt="Foto de Cuzco" width="500">
-            <h2>Blanca deportiva</h2>
-            <h3>$150</h3>
-            <p>La mejor playera deportiva con tecnología dry tech para hombre , nuestra nueva línea deportiva de manga larga es un producto básico, tanto para el uso personal como para uniformar o promocionar tu equipo.</p>
+            <img src="<%= request.getContextPath()%>/img-productos/<%=producto.getNombre_producto()%>.jpg" alt="Foto de Cuzco" width="500">
+            <h2><%=producto.getNombre_producto()%></h2>
+            <h3>$<%=producto.getPrecio()%></h3>
+            <p><%=producto.getDescripcion()%></p>
             <div class="button-container">
                 <button>Agregar al carrito</button>
             </div>
         </div>
-
-        <div class="product-card">
-            <img src="<%= request.getContextPath()%>/img-productos/carbon_deportiva.jpg" alt="Foto de Cuzco" width="500">
-            <h2>Carbon deportiva</h2>
-            <h3>$150</h3>
-            <p>La mejor playera deportiva con tecnología dry tech para hombre , nuestra nueva línea deportiva de manga larga es un producto básico, tanto para el uso personal como para uniformar o promocionar tu equipo.</p>
-            <div class="button-container">
-                <button formaction="" formmethod="">Agregar al carrito</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="<%= request.getContextPath()%>/img-productos/negra_deportiva.jpg" alt="Foto de Cuzco" width="500">
-            <h2>Negra deportiva</h2>
-            <h3>$150</h3>
-            <p>La mejor playera deportiva con tecnología dry tech para hombre , nuestra nueva línea deportiva de manga larga es un producto básico, tanto para el uso personal como para uniformar o promocionar tu equipo.</p>
-            <div class="button-container">
-                <button>Agregar al carrito</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <img src="<%= request.getContextPath()%>/img-productos/roja_deportiva.jpg" alt="Foto de Cuzco" width="500">
-            <h2>Roja deportiva</h2>
-            <h3>$150</h3>
-            <p>La mejor playera deportiva con tecnología dry tech para hombre , nuestra nueva línea deportiva de manga larga es un producto básico, tanto para el uso personal como para uniformar o promocionar tu equipo.</p>
-            <div class="button-container">
-                <button>Agregar al carrito</button>
-            </div>
-        </div>
+        <%
+                }
+            }
+        %>
 
     </section>
 
