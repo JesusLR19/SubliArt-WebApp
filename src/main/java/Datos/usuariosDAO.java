@@ -474,5 +474,30 @@ public class usuariosDAO {
         }
         return lista_usuariosInactivos;
     }
+    public int updateContacto(int id_contacto, int id_usuario) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        int registros = 0;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("UPDATE usuarios SET id_contacto = ? WHERE id_usuario = ?");
+
+            ps.setInt(1, id_contacto);
+            ps.setInt(2, id_usuario);
+
+            registros = ps.executeUpdate();
+            if (registros > 0) {
+                System.out.println("Se ha agregado correctamente la direccion al usuario");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return registros;
+    }
 
 }

@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+
 public class contactoDAO {
     public List<contacto> listar(){
         Connection conn = null;
@@ -60,5 +61,32 @@ public class contactoDAO {
             Conexion.close(ps);
             Conexion.close(conn);
         }
+    }
+    public int getIdByNumTel(String num_telefonico){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        int id_contacto = 0;
+
+        try {
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("SELECT id_contacto FROM contacto WHERE num_telefonico =?");
+            ps.setString(1, num_telefonico);
+            rs = ps.executeQuery();
+
+            if(rs.next()){
+
+                id_contacto = rs.getInt("id_contacto");
+
+/*                if(id_rol > 0){
+                    System.out.println("Rol obtenido con exito");
+                }else{
+                    System.out.println("Rol no encontrado");
+                }*/
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return id_contacto;
     }
 }

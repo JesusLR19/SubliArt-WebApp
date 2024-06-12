@@ -13,6 +13,8 @@ import Modelo.vistaProductos;
 import Datos.vistaProductosDAO;
 import Modelo.pedidos;
 import Datos.pedidosDAO;
+import Modelo.contacto;
+import Datos.contactoDAO;
 
 public class Main_productos {
     public static void main(String[] args) {
@@ -42,18 +44,19 @@ public class Main_productos {
 //            }
 //        }
 
-        pedidosDAO pedidosDAO = new pedidosDAO();
-        List<pedidos> pedidos = pedidosDAO.listarPorUsuario(1);
-        if (pedidos != null) {
-            for (pedidos pedido : pedidos) {
-                System.out.println(pedido.getId_pedido());
-                System.out.println(pedido.getTotal_productos());
-                System.out.println(pedido.getTotal_mxn());
-                System.out.println(pedido.isEstatus());
-            }
-        }
-
-
+//        pedidosDAO pedidosDAO = new pedidosDAO();
+//        List<pedidos> pedidos = pedidosDAO.listarPorUsuario(1);
+//        if (pedidos != null) {
+//            for (pedidos pedido : pedidos) {
+//                System.out.println(pedido.getId_pedido());
+//                System.out.println(pedido.getTotal_productos());
+//                System.out.println(pedido.getTotal_mxn());
+//                System.out.println(pedido.isEstatus());
+//            }
+//        }
+        contactoDAO contacto = new contactoDAO();
+        int id_contacto = contacto.getIdByNumTel("2293015889");
+        System.out.println(id_contacto);
 /*        categoriaDAO cdao = new categoriaDAO();
         List<categoria_producto> categorias = cdao.listar();
         if (categorias != null) {
