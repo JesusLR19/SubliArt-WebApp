@@ -64,15 +64,15 @@
     <section>
         <h2>Agregar direccion</h2>
         <h3>Ingresa todos los datos de contacto</h3>
-        <form action = "<%= request.getContextPath()%>/SvAgregarDireccion"  class="form-register" method="post">
-            <h4>Agregar informacion de contacto</h4>
-            <input class ="controls" type="text" name="calle" id="calle" placeholder="Ingresa la calle" required>
-            <input class ="controls" type="text" name="numero" id="numero" placeholder="Ingresa el numero" required>
-            <input class ="controls" type="text" name="colonia" id="colonia" placeholder="Ingresa la colonia" required>
-            <input class ="controls" type="text" name="cp" id="cp" placeholder="Ingresa el codigo postal" required>
-            <input class ="controls" type="text" name="referencias" id="referencias" placeholder="Ingresa las referencias del lugar" required>
-            <input class ="controls" type="text" name="num_telefonico" id="num_telefonico" placeholder="Ingrese el numero telefonico" required maxlength="10">
-            <input type = "hidden" name = "id_usuario" id = "id_usuario" value =<%usuario.getId_usuario();%>>
+        <form action="<%= request.getContextPath()%>/SvAgregarDireccion" class="form-register" method="post">
+            <h4>Agregar información de contacto</h4>
+            <input class="controls" type="text" name="calle" id="calle" placeholder="Ingresa la calle" required>
+            <input class="controls" type="text" name="numero" id="numero" placeholder="Ingresa el número" required>
+            <input class="controls" type="text" name="colonia" id="colonia" placeholder="Ingresa la colonia" required>
+            <input class="controls" type="number" name="cp" id="cp" placeholder="Ingresa el código postal" required>
+            <input class="controls" type="text" name="referencias" id="referencias" placeholder="Ingresa las referencias del lugar" required>
+            <input class="controls" type="text" name="num_telefonico" id="num_telefonico" placeholder="Ingrese el número telefónico" required maxlength="10" pattern="\d{10}" title="Debe contener 10 dígitos numéricos">
+            <input type="hidden" name="id_usuario" id="id_usuario" value="<%= usuario.getId_usuario() %>">
             <button class="botons" type="submit">Enviar</button>
         </form>
         <%
