@@ -52,6 +52,7 @@ public class usuariosDAO {
             conn = Conexion.getConnection();
             ps = conn.prepareStatement("SELECT * FROM usuarios WHERE id_usuario=?");
             ps.setInt(1,idUsuario);
+            ps.executeQuery();
 
             if (rs.next()){
                 int id_usuario = rs.getInt("id_usuario");
@@ -76,6 +77,7 @@ public class usuariosDAO {
         }
         return usuario;
     }
+
     public usuarios identificarNombre(String nombre_usuario) throws Exception {
         Connection conn = null;
         PreparedStatement ps = null;

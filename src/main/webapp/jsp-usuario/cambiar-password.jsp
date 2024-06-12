@@ -46,7 +46,7 @@ usuariosDAO usuarioDAO = new usuariosDAO();
     <section>
         <h2>Cambiar contraseña</h2>
         <h3>Ingresa tu nueva contraseña y envia el formulario.</h3>
-        <form action = "<%= request.getContextPath()%>/SvCambiarPswd"  class="form-register" method="post">
+        <form action = "<%= request.getContextPath()%>/SvCambiarPswdUsu"  class="form-register" method="post">
             <h4>Cambiar contraseña</h4>
             <input type="hidden" name="id_usuario" id="id_usuario" value="<%=usu.getId_usuario() %>">
             <input class ="controls" type="password" name="past_password" id="past_password" placeholder="Ingresa tu anterior contraseña" required>
