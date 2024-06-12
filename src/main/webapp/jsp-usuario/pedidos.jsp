@@ -27,6 +27,7 @@
     <title>Pedidos</title>
     <link href="<%= request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css">
     <link href="<%= request.getContextPath()%>/css/estilos-registro.css" rel="stylesheet" type="text/css">
+    <link href="<%= request.getContextPath()%>/css/tablas.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -65,17 +66,13 @@
         <h3>En este apartado se encuentran todos tus pedidos</h3>
         <div class="container">
             <table class="table">
-                <caption>Usuarios Activados</caption>
+                <caption>Pedidos realizados</caption>
                 <thead>
                 <tr>
-                    <th>id_usuario</th>
-                    <th>Nombre</th>
-                    <th>ApellidoP</th>
-                    <th>ApellidoM</th>
-                    <th>Username</th>
-                    <th>id_contacto</th>
-                    <th>id_rol</th>
-                    <th>Estatus</th>
+                    <th>id_pedido</th>
+                    <th>total_productos</th>
+                    <th>total_mxn</th>
+                    <th>estatus</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -87,14 +84,10 @@
                         for (pedidos pedido : pedidos) {
                 %>
                 <tr>
-                    <td data-label="id_usuario"><%=usuario.getId_usuario() %></td>
-                    <td data-label="Nombre"><%=usuario.getNombre() %></td>
-                    <td data-label="ApellidoP"><%=usuario.getApellido_p() %></td>
-                    <td data-label="ApellidoM"><%=usuario.getApellido_m() %></td>
-                    <td data-label="Username"><%=usuario.getUsername() %></td>
-                    <td data-label="id_contacto"><%=usuario.getId_contacto() %></td>
-                    <td data-label="id_rol"><%=usuario.getId_rol() %></td>
-                    <td data-label="id_rol"><%=usuario.isEstatus() %></td>
+                    <td data-label="id_pedido"><%=pedido.getId_pedido()%></td>
+                    <td data-label="total_productos"><%=pedido.getTotal_productos()%></td>
+                    <td data-label="total_mxn"><%=pedido.getTotal_mxn()%></td>
+                    <td data-label="estatus"><%=pedido.isEstatus()%></td>
                 </tr>
                 <%
                         }

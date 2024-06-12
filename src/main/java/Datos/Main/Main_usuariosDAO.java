@@ -23,6 +23,7 @@ public class Main_usuariosDAO {
 
         //usuarioDAO.activarUsuario("ichuchex");
         //usuarioDAO.cambiarPassword(1,"12345");
-
+        int id = usuarioDAO.getIdByUsername("jesuslr");
+        System.out.println(id);
     }
 }
