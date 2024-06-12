@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import Datos.usuariosDAO;
 
 @WebServlet(name ="SvBorrarUsu" , value = "/SvBorrarUsu")
-public class SvBorrarUsu extends HttpServlet {
+public class        SvBorrarUsu extends HttpServlet {
 
     private usuariosDAO usuariosDAO = new usuariosDAO();
 

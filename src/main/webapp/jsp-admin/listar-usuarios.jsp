@@ -55,7 +55,7 @@
 
         <div class="container">
             <table class="table">
-                <caption>Usuarios Activados</caption>
+                <caption>Usuarios Activos</caption>
                 <thead>
                 <tr>
                     <th>id_usuario</th>
@@ -95,7 +95,7 @@
             </table>
         </div>
 
-        <div class="container">
+  <%--      <div class="container">
             <table class="table">
                 <caption>Usuarios Desactivados</caption>
                 <thead>
@@ -175,7 +175,7 @@
                 %>
                 </tbody>
             </table>
-        </div>
+        </div>--%>
 
 
 
