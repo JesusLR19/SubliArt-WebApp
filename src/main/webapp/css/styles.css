@@ -194,6 +194,7 @@ nav ul li a:hover {
 
 .lista ul {
     list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0px;
     width: 200px;

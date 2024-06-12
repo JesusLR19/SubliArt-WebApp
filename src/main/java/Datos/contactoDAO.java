@@ -92,4 +92,38 @@ public class contactoDAO {
         }
         return id_contacto;
     }
+    public List<contacto> listarByNum_tel(String num_tel){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        List<contacto> contactos = new ArrayList<>();
+
+        try{
+            conn = Conexion.getConnection();
+            ps = conn.prepareStatement("SELECT * FROM contacto WHERE num_telefonico =?");
+            ps.setString(1, num_tel);
+            rs = ps.executeQuery();
+
+            while (rs.next()){
+                int id_contacto = rs.getInt("id_contacto");
+                String calle = rs.getString("calle");
+                String numero = rs.getString("numero");
+                String colonia = rs.getString("colonia");
+                int cp = rs.getInt("cp");
+                String referencias = rs.getString("referencias");
+                String num_telefonico = rs.getString("num_telefonico");
+
+                contacto add_contacto = new contacto(id_contacto,calle,numero,colonia,cp,referencias,num_telefonico);
+                contactos.add(add_contacto);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            Conexion.close(rs);
+            Conexion.close(ps);
+            Conexion.close(conn);
+        }
+        return contactos;
+    }
 }

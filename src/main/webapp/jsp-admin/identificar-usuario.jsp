@@ -19,6 +19,7 @@
     <title>Identificar usuario - username</title>
     <link href="<%= request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css">
     <link href="<%= request.getContextPath()%>/css/estilos-registro.css" rel="stylesheet" type="text/css">
+    <link rel = "icon" type="image/x-icon" href="<%= request.getContextPath()%>/assets/subliart.svg">
 </head>
 
 <body>

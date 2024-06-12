@@ -10,13 +10,14 @@
     <title>Productos</title>
     <link rel = "stylesheet" href="<%= request.getContextPath()%>/css/styles.css">
     <link rel = "stylesheet" href="<%= request.getContextPath()%>/css/productos.css">
+    <link rel = "icon" type="image/x-icon" href="<%= request.getContextPath()%>/assets/subliart.svg">
 </head>
 <body>
 <header>
     <nav>
         <ul>
             <li><a href="<%= request.getContextPath()%>/index.jsp">Inicio</a></li>
-            <li><a href="<%= request.getContextPath()%>/jsp-productos/productos.jspductos.jsp">Productos</a></li>
+            <li><a href="<%= request.getContextPath()%>/jsp-productos/productos.jsp">Productos</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Contacto</a></li>
             <%

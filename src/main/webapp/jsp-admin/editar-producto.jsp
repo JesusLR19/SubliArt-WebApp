@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel = "icon" type="image/x-icon" href="<%= request.getContextPath()%>/assets/subliart.svg">
 </head>
 <body>
 

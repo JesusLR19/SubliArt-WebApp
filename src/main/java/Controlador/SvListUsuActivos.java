@@ -16,7 +16,7 @@ public class SvListUsuActivos extends HttpServlet{
 
     private usuariosDAO usuariosDAO = new usuariosDAO();
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try{
             List<usuarios> listaUsuarios = usuariosDAO.listarActivos();
 

@@ -5,6 +5,7 @@
     <title>Inicio - Subli-Art</title>
     <link href="./css/styles.css" rel="stylesheet" type="text/css">
     <link href="./css/estilos-registro.css" rel="stylesheet" type="text/css">
+    <link rel = "icon" type="image/x-icon" href="<%= request.getContextPath()%>/assets/subliart.svg">
 <%--    <link rel ="stylesheet" href = "./css/bootstrap.min.css">--%>
 </head>
 <body>

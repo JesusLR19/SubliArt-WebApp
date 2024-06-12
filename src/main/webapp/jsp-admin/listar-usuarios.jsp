@@ -13,12 +13,14 @@
         response.sendRedirect("../jsp/error.jsp");
     }
 %>
+
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <head>
     <title>Listado de usuarios</title>
     <link href="<%= request.getContextPath()%>/css/styles.css" rel="stylesheet" type="text/css">
     <link href="<%= request.getContextPath()%>/css/tablas.css" rel="stylesheet" type="text/css">
+    <link rel = "icon" type="image/x-icon" href="<%= request.getContextPath()%>/assets/subliart.svg">
 </head>
 
 <body>

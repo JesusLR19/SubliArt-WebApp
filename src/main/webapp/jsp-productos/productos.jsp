@@ -10,6 +10,7 @@
     <title>Productos</title>
     <link rel = "stylesheet" href="<%= request.getContextPath()%>/css/styles.css">
     <link rel = "stylesheet" href="<%= request.getContextPath()%>/css/productos.css">
+    <link rel = "icon" type="image/x-icon" href="<%= request.getContextPath()%>/assets/subliart.svg">
 </head>
 <body>
     <header>
