@@ -9,20 +9,37 @@ import Datos.almacenDAO;
 import Modelo.almacen;
 import Datos.categoriaDAO;
 import Modelo.categoria_producto;
+import Modelo.vistaProductos;
+import Datos.vistaProductosDAO;
+
 public class Main_productos {
     public static void main(String[] args) {
 
-        productosDAO dao = new productosDAO();
-        descripcionDAO descripcionDAO = new descripcionDAO();
-        List<descripcion_producto> descripciones = descripcionDAO.listar();
-        if (descripciones != null) {
-            for (descripcion_producto descripcion : descripciones) {
-                System.out.println(descripcion.getId_descripcion());
-                System.out.println(descripcion.getDescripcion());
-                System.out.println(descripcion.getTalla());
-                System.out.println(descripcion.getMaterial());
+//        productosDAO dao = new productosDAO();
+//        descripcionDAO descripcionDAO = new descripcionDAO();
+//        List<descripcion_producto> descripciones = descripcionDAO.listar();
+//        if (descripciones != null) {
+//            for (descripcion_producto descripcion : descripciones) {
+//                System.out.println(descripcion.getId_descripcion());
+//                System.out.println(descripcion.getDescripcion());
+//                System.out.println(descripcion.getTalla());
+//                System.out.println(descripcion.getMaterial());
+//            }
+//        }
+
+        vistaProductosDAO vistaProductosDAO = new vistaProductosDAO();
+        List<vistaProductos> productos = vistaProductosDAO.listar();
+        if (productos != null) {
+            for (vistaProductos producto : productos) {
+                System.out.println(producto.getId_producto());
+                System.out.println(producto.getNombre_producto());
+                System.out.println(producto.getDescripcion());
+                System.out.println(producto.getCategoria());
+                System.out.println(producto.getPrecio());
+                System.out.println("------------------------");
             }
         }
+
 
 /*        categoriaDAO cdao = new categoriaDAO();
         List<categoria_producto> categorias = cdao.listar();
