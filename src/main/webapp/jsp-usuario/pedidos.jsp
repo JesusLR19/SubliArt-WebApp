@@ -46,7 +46,6 @@
         <ul class="lista">
             <li><a class = "active" href="<%= request.getContextPath()%>/jsp-usuario/pedidos.jsp">Pedidos</a></li>
             <li><a href="<%= request.getContextPath()%>/jsp-usuario/agregar-direccion.jsp">Agregar direccion</a> </li>
-            <li><a href="<%= request.getContextPath()%>/jsp-usuario/agregar-info-contacto.jsp">Agregar informacion de contacto</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-usuario/cambiar-password.jsp">Cambiar contraseña</a></li>
             <li><a href="<%= request.getContextPath()%>/jsp-usuario/cambiar-username.jsp">Cambiar nombre usuario</a></li>
             <li><a href="<%= request.getContextPath()%>/jsp-usuario/desactivar-cuenta.jsp">Desactivar mi cuenta</a></li>

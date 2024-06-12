@@ -10,6 +10,7 @@
         <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp-admin/inicio-admin.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp-admin" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp-admin/listar-usuarios.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp-admin" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp-productos/playeras-oversize.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp-productos" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp-usuario/cambiar-password.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp-usuario" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/registro.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp" />
       </map>
