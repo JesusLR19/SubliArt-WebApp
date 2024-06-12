@@ -487,8 +487,11 @@ public class usuariosDAO {
             ps.setInt(2, id_usuario);
 
             registros = ps.executeUpdate();
+
             if (registros > 0) {
                 System.out.println("Se ha agregado correctamente la direccion al usuario");
+            }else {
+                System.out.println("Error");
             }
 
         } catch (Exception e) {
