@@ -6,7 +6,7 @@ create table if not exists contacto(
 	colonia varchar(100) not null,
 	cp int not null,
 	referencias text,
-	num_telefonico varchar(20) not null
+	num_telefonico varchar(20) not null unique
 );
 
 create table if not exists rol(

@@ -43,8 +43,8 @@
     <aside>
 
         <ul class="lista">
-            <li><a class = "active" href="<%= request.getContextPath()%>/jsp-usuario/pedidos.jsp">Pedidos</a></li>
-            <li><a href="<%= request.getContextPath()%>/jsp-usuario/agregar-direccion.jsp">Agregar direccion</a> </li>
+            <li><a href="<%= request.getContextPath()%>/jsp-usuario/pedidos.jsp">Pedidos</a></li>
+            <li><a class="active" href="<%= request.getContextPath()%>/jsp-usuario/agregar-direccion.jsp">Agregar direccion</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-usuario/agregar-info-contacto.jsp">Agregar informacion de contacto</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-usuario/cambiar-password.jsp">Cambiar contraseña</a></li>
             <li><a href="<%= request.getContextPath()%>/jsp-usuario/cambiar-username.jsp">Cambiar nombre usuario</a></li>
@@ -55,26 +55,33 @@
     </aside>
 
     <%
-        String username = (String) sessionActive.getAttribute("username");
         usuariosDAO usuarioDAOs = new usuariosDAO();
         usuarios usuario;
 
-        usuario = usuarioDAOs.identificarNombre(username);
+        usuario = usuarioDAOs.identificarNombre(usernameA);
 
     %>
     <section>
         <h2>Agregar direccion</h2>
         <h3>Ingresa todos los datos de contacto</h3>
-        <form action = "<%= request.getContextPath()%>/SvAgregarDireccion"  class="form-register">
+        <form action = "<%= request.getContextPath()%>/SvAgregarDireccion"  class="form-register" method="post">
             <h4>Agregar informacion de contacto</h4>
             <input class ="controls" type="text" name="calle" id="calle" placeholder="Ingresa la calle" required>
             <input class ="controls" type="text" name="numero" id="numero" placeholder="Ingresa el numero" required>
             <input class ="controls" type="text" name="colonia" id="colonia" placeholder="Ingresa la colonia" required>
+            <input class ="controls" type="text" name="cp" id="cp" placeholder="Ingresa el codigo postal" required>
             <input class ="controls" type="text" name="referencias" id="referencias" placeholder="Ingresa las referencias del lugar" required>
             <input class ="controls" type="text" name="num_telefonico" id="num_telefonico" placeholder="Ingrese el numero telefonico" required maxlength="10" pattern="\d{10}">
-            <input type = "hidden" name = "id_usuario" id = "id_usuario" value ="<%usuario.getId_usuario();%>">
+            <input type = "hidden" name = "id_usuario" id = "id_usuario" value ="<%=usuario.getId_usuario()%>%>">
             <button class="botons" type="submit">Enviar</button>
         </form>
+        <%
+            String mensajeExito = (String) request.getAttribute("mensajeExito");
+            if (mensajeExito != null) {
+        %>
+        <p>Direccion agregada correctamente</p>
+
+        <% } %>
 
     </section>
 
