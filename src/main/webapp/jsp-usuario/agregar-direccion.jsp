@@ -71,8 +71,8 @@
             <input class ="controls" type="text" name="colonia" id="colonia" placeholder="Ingresa la colonia" required>
             <input class ="controls" type="text" name="cp" id="cp" placeholder="Ingresa el codigo postal" required>
             <input class ="controls" type="text" name="referencias" id="referencias" placeholder="Ingresa las referencias del lugar" required>
-            <input class ="controls" type="text" name="num_telefonico" id="num_telefonico" placeholder="Ingrese el numero telefonico" required maxlength="10" pattern="\d{10}">
-            <input type = "hidden" name = "id_usuario" id = "id_usuario" value ="<%=usuario.getId_usuario()%>%>">
+            <input class ="controls" type="text" name="num_telefonico" id="num_telefonico" placeholder="Ingrese el numero telefonico" required maxlength="10">
+            <input type = "hidden" name = "id_usuario" id = "id_usuario" value =<%usuario.getId_usuario();%>>
             <button class="botons" type="submit">Enviar</button>
         </form>
         <%

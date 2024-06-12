@@ -40,7 +40,7 @@ public class contactoDAO {
         }
         return contactos;
     }
-    public void agregarContacto(contacto contacto){
+    public void agregarContacto(contacto contacto) throws Exception{
         Connection conn = null;
         PreparedStatement ps = null;
 
@@ -54,14 +54,17 @@ public class contactoDAO {
             ps.setInt(4,contacto.getCp());
             ps.setString(5,contacto.getReferencias());
             ps.setString(6,contacto.getNum_telefonico());
+            ps.executeUpdate();
 
         }catch (Exception e){
             e.printStackTrace();
+            throw new Exception("Error al agregar el contacto",e);
         }finally {
             Conexion.close(ps);
             Conexion.close(conn);
         }
     }
+
     public int getIdByNumTel(String num_telefonico){
         Connection conn = null;
         PreparedStatement ps = null;
