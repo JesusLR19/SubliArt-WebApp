@@ -33,7 +33,7 @@ public class SvIrAPago extends HttpServlet {
         request.setAttribute("total", total);
         request.setAttribute("costoEnvio", COSTO_ENVIO);
 
-        request.getRequestDispatcher("/jsp-usuario/pago.jsp").forward(request, response);
+        request.getRequestDispatcher("/jsp-productos/pago.jsp").forward(request, response);
     }
 }
 

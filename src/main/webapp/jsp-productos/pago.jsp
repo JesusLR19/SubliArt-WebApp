@@ -61,6 +61,42 @@
     </aside>
 
     <section>
+        <h1>Página de Pago</h1>
+
+        <table class="table">
+            <caption>Resumen del Pedido</caption>
+            <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+            </thead>
+            <tbody>
+            <%
+                List<vistaProductos> carrito = (List<vistaProductos>) session.getAttribute("carrito");
+                if (carrito != null) {
+                    for (vistaProductos producto : carrito) {
+            %>
+            <tr>
+                <td><%= producto.getNombre_producto() %></td>
+                <td>$<%= producto.getPrecio() %></td>
+            </tr>
+            <%
+                    }
+                }
+            %>
+            </tbody>
+        </table>
+
+        <div class="resumen">
+            <p>Subtotal: $<%= request.getAttribute("subtotal") %></p>
+            <p>Costo de Envío: $<%= request.getAttribute("costoEnvio") %></p>
+            <p>Total: $<%= request.getAttribute("total") %></p>
+        </div>
+
+        <form action="<%= request.getContextPath() %>/#" method="post">
+            <button type="submit">Proceder al Pago</button>
+        </form>
 
     </section>
 
