@@ -71,7 +71,7 @@
             <tr>
                 <th>Producto</th>
                 <th>Precio</th>
-                <th>Descripción</th>
+                <th>Categoria</th>
             </tr>
             </thead>
             <tbody>
@@ -82,7 +82,7 @@
             <tr>
                 <td><%= producto.getNombre_producto() %></td>
                 <td>$<%= producto.getPrecio() %></td>
-                <td><%= producto.getDescripcion() %></td>
+                <td><%= producto.getCategoria() %></td>
             </tr>
             <%
                     }

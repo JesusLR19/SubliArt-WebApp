@@ -73,6 +73,7 @@
                     <input type="hidden" name="nombre_producto" value="<%=producto.getNombre_producto()%>">
                     <input type="hidden" name="precio" value="<%=producto.getPrecio()%>">
                     <input type="hidden" name="descripcion" value="<%=producto.getDescripcion()%>">
+                    <input type="hidden" name="categoria" value="<%=producto.getCategoria()%>">
                     <div class="button-container">
                         <button type="submit">Agregar al carrito</button>
                     </div>
