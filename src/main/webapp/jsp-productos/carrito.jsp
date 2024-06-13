@@ -101,7 +101,10 @@
             %>
             </tbody>
         </table>
-
+        <br>
+        <form action="<%= request.getContextPath() %>/SvIrAPago" class="form-register" method="get">
+            <button class="button-container" type="submit">Proceder al Pago</button>
+        </form>
     </section>
 
 </div>
