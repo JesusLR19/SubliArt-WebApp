@@ -10,6 +10,7 @@
     <title>Productos</title>
     <link rel = "stylesheet" href="<%= request.getContextPath()%>/css/styles.css">
     <link rel = "stylesheet" href="<%= request.getContextPath()%>/css/productos.css">
+    <link rel = "stylesheet" href="<%= request.getContextPath()%>/css/tablas.css">
     <link rel = "icon" type="image/x-icon" href="<%= request.getContextPath()%>/assets/subliart.svg">
 </head>
 <body>
@@ -52,19 +53,43 @@
 
 <div class = "row">
     <aside>
-
         <ul class="lista">
             <li><a href="<%= request.getContextPath()%>/jsp-productos/productos.jsp">Playeras</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-productos/playeras-deportivas.jsp">Playeras deportivas</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-productos/playeras-oversize.jsp">Playeras oversize</a></li>
         </ul>
-
-
     </aside>
 
+    <%
+        List<vistaProductos> carrito = (List<vistaProductos>) session.getAttribute("carrito");
+    %>
 
-    <section class="products-section">
-
+    <section>
+        <h1>Tu Carrito de Compras</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+            </tr>
+            </thead>
+            <tbody>
+            <%
+                if (carrito != null) {
+                    for (vistaProductos producto : carrito) {
+            %>
+            <tr>
+                <td><%= producto.getNombre_producto() %></td>
+                <td>$<%= producto.getPrecio() %></td>
+                <td><%= producto.getDescripcion() %></td>
+            </tr>
+            <%
+                    }
+                }
+            %>
+            </tbody>
+        </table>
 
     </section>
 
