@@ -61,7 +61,10 @@
     </aside>
 
     <section>
+        <h1>Pago Completado</h1>
+        <p>Tu pago ha sido procesado exitosamente. Gracias por tu compra.</p>
 
+        <a href="<%= request.getContextPath() %>/index.jsp">Volver al inicio</a>
     </section>
 
 </div>

@@ -80,6 +80,8 @@ public class pedidosDAO {
             ps.setDouble(3,pedido.getTotal_mxn());
             ps.setBoolean(4,true);
 
+            ps.executeUpdate();
+
         }catch (Exception e){
             e.printStackTrace();
         }finally {
