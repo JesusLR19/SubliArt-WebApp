@@ -60,7 +60,7 @@ create table if not exists pedidos(
 	id_pedido serial primary key,
 	id_usuario int,
 	total_productos int not null,
-	total_mxn float,
+	total_mxn double,
 	estatus boolean,
 	constraint fk_id_usuario foreign key(id_usuario) references usuarios(id_usuario)
 	ON DELETE RESTRICT

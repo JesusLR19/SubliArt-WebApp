@@ -94,7 +94,7 @@
             <p>Total: $<%= request.getAttribute("total") %></p>
         </div>
 
-        <form action="<%= request.getContextPath() %>/#" method="post">
+        <form action="<%= request.getContextPath() %>/SvProcesarPago" method="post">
             <button type="submit">Proceder al Pago</button>
         </form>
 
