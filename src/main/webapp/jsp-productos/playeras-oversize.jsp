@@ -67,9 +67,15 @@
             <h2><%=producto.getNombre_producto()%></h2>
             <h3>$<%=producto.getPrecio()%></h3>
             <p><%=producto.getDescripcion()%></p>
-            <div class="button-container">
-                <button>Agregar al carrito</button>
-            </div>
+            <form action="<%= request.getContextPath()%>/SvAgregarCarrito" method="post">
+                <input type="hidden" name="id_producto" value="<%=producto.getId_producto()%>">
+                <input type="hidden" name="nombre_producto" value="<%=producto.getNombre_producto()%>">
+                <input type="hidden" name="precio" value="<%=producto.getPrecio()%>">
+                <input type="hidden" name="descripcion" value="<%=producto.getDescripcion()%>">
+                <div class="button-container">
+                    <button type="submit">Agregar al carrito</button>
+                </div>
+            </form>
         </div>
         <%
                 }
