@@ -72,6 +72,8 @@
                 <th>Producto</th>
                 <th>Precio</th>
                 <th>Categoria</th>
+                <th>Cantidad</th>
+                <th>Modificar</th>
             </tr>
             </thead>
             <tbody>
@@ -83,6 +85,15 @@
                 <td><%= producto.getNombre_producto() %></td>
                 <td>$<%= producto.getPrecio() %></td>
                 <td><%= producto.getCategoria() %></td>
+                <td>1</td>
+                <td>
+                    <form action="<%= request.getContextPath()%>/SvEliminarDelCarrito" method="post">
+                        <input type="hidden" name="nombre_producto" value="<%= producto.getNombre_producto() %>">
+                        <div class ="button-container">
+                            <button type="submit">Eliminar</button>
+                        </div>
+                    </form>
+                </td>
             </tr>
             <%
                     }
