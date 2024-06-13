@@ -77,7 +77,7 @@ public class pedidosDAO {
 
             ps.setInt(1,pedido.getId_usuario());
             ps.setInt(2,pedido.getTotal_productos());
-            ps.setFloat(3,pedido.getTotal_mxn());
+            ps.setDouble(3,pedido.getTotal_mxn());
             ps.setBoolean(4,true);
 
         }catch (Exception e){

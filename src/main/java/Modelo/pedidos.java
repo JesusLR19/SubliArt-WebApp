@@ -8,12 +8,12 @@ public class pedidos implements Serializable {
     private int id_pedido;
     private int id_usuario;
     private int total_productos;
-    private float total_mxn;
+    private double total_mxn;
     private boolean estatus;
 
     public pedidos(){}
 
-    public pedidos(int id_pedido, int id_usuario, int total_productos, float total_mxn, boolean estatus) {
+    public pedidos(int id_pedido, int id_usuario, int total_productos, double total_mxn, boolean estatus) {
         this.id_pedido = id_pedido;
         this.id_usuario = id_usuario;
         this.total_productos = total_productos;
@@ -45,11 +45,11 @@ public class pedidos implements Serializable {
         this.total_productos = total_productos;
     }
 
-    public float getTotal_mxn() {
+    public double getTotal_mxn() {
         return total_mxn;
     }
 
-    public void setTotal_mxn(float total_mxn) {
+    public void setTotal_mxn(double total_mxn) {
         this.total_mxn = total_mxn;
     }
 
