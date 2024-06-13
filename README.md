@@ -13,3 +13,5 @@ Se aplica lo aprendido en clases respecto a los siguientes temas:
 - Arquitectura cliente-servidor
 - Hypertext Markup Language (HTML)
 - Cascade Style Sheets (CSS)
+
+***Jesus Eduardo Lopez Rodriguez***
