@@ -16,14 +16,10 @@ public class SvAddProducto extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String nombre_producto = request.getParameter("nombre_producto");
-        String id_desc = request.getParameter("id_descripcion");
-        String id_cat = request.getParameter("id_categoria");
-        String precio_t = request.getParameter("precio");
-
-        Float precio = Float.parseFloat(precio_t);
-        int id_descripcion = Integer.parseInt(id_desc);
-        int id_categoria = Integer.parseInt(id_cat);
-
+        int id_descripcion = Integer.parseInt(request.getParameter("id_descripcion"));
+        int id_categoria = Integer.parseInt(request.getParameter("id_categoria"));
+        float precio = Float.parseFloat(request.getParameter("precio"));
+        System.out.println(id_descripcion);
 
         try {
             productos producto = new productos(0, nombre_producto, id_descripcion, id_categoria, precio);

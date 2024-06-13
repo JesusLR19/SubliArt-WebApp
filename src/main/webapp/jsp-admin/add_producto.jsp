@@ -101,6 +101,7 @@
             <h4>Agregar producto</h4>
             <input class ="controls" type="text" name="nombre_producto" id="nombre_producto" placeholder="Nombre del producto" required>
             <h5>id_descripcion</h5>
+
             <select id="id_descripcion" name="id_descripcion" class="controls" required>
                 <%
                     descripcionDAO descripcionDAO = new descripcionDAO();
@@ -108,14 +109,13 @@
                     if(descripciones != null){
                         for (descripcion_producto desc : descripciones) {
                 %>
-                <option value="<%desc.getId_descripcion();%>"><%=desc.getId_descripcion()%>. <%=desc.getTalla()%>, <%=desc.getMaterial()%></option>
+                <option value="<%=desc.getId_descripcion()%>"><%=desc.getId_descripcion()%>. <%=desc.getTalla()%>, <%=desc.getMaterial()%></option>
                 <%
                         }
                     }
                 %>
             </select>
             <h5>id_categoria</h5>
-            <% %>
             <select id="id_categoria" name="id_categoria" class="controls" required>
                 <%
                     categoriaDAO categoriaDAO = new categoriaDAO();
@@ -123,7 +123,7 @@
                     if(categorias != null){
                         for (categoria_producto categoria : categorias) {
                 %>
-                <option value="<%categoria.getId_categoria();%>"><%=categoria.getId_categoria()%>. <%=categoria.getNombre_categoria()%></option>
+                <option value="<%=categoria.getId_categoria()%>"><%=categoria.getId_categoria()%>. <%=categoria.getNombre_categoria()%></option>
                 <%
                         }
                     }
