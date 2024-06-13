@@ -225,3 +225,8 @@ table{
 .table td,th{
     padding: 5px 10px;
 }
+
+.logo {
+    width: 20px;
+    height: 20px;
+}

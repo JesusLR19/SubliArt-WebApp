@@ -26,6 +26,13 @@
                         String username = (String) sessionActive.getAttribute("username");
                 %>
                 <li class="login"><a href="<%= request.getContextPath()%>/jsp-usuario/panel-usuario.jsp">Bienvenido <%= username %> </a></li>
+
+                <li class="login">
+                    <a href="<%= request.getContextPath() %>/jsp-productos/carrito.jsp">
+                        <img class = "logo" src="<%= request.getContextPath() %>/assets/carrito.svg" alt="Carrito">
+                    </a>
+                </li>
+
                 <li class="login"><a href="<%= request.getContextPath()%>/SvLogout">Cerrar sesion</a></li>
                 <%
                     }else {

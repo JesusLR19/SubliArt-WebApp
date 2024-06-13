@@ -41,7 +41,8 @@
                 </a>
             </li>
 
-            <li class="login"><a href="./SvLogout">Cerrar sesion</a></li>
+            <li class="login"><a href="<%= request.getContextPath()%>/SvLogout">Cerrar sesion</a></li>
+
             <% } else { %>
             <li class="login"><a href="<%= request.getContextPath()%>/jsp/login.jsp">Iniciar sesion</a></li>
             <% } %>
@@ -54,7 +55,7 @@
 
         <ul class="lista">
             <li><a href="<%= request.getContextPath()%>/jsp-productos/productos.jsp">Playeras</a> </li>
-            <li><a class = "active" href="<%= request.getContextPath()%>/jsp-productos/playeras-deportivas.jsp">Playeras deportivas</a> </li>
+            <li><a href="<%= request.getContextPath()%>/jsp-productos/playeras-deportivas.jsp">Playeras deportivas</a> </li>
             <li><a href="<%= request.getContextPath()%>/jsp-productos/playeras-oversize.jsp">Playeras oversize</a></li>
         </ul>
 
@@ -63,31 +64,7 @@
 
 
     <section class="products-section">
-        <%
-            vistaProductosDAO vistaProductosDAO = new vistaProductosDAO();
-            List<vistaProductos> productos = vistaProductosDAO.listarSlimFit();
-            if (productos != null) {
-                for (vistaProductos producto : productos) {
-        %>
-        <div class="product-card">
-            <img src="<%= request.getContextPath()%>/img-productos/<%=producto.getNombre_producto()%>.jpg" alt="Foto de Cuzco" width="500">
-            <h2><%=producto.getNombre_producto()%></h2>
-            <h3>$<%=producto.getPrecio()%></h3>
-            <p><%=producto.getDescripcion()%></p>
-            <form action="<%= request.getContextPath()%>/SvAgregarCarrito" method="post">
-                <input type="hidden" name="id_producto" value="<%=producto.getId_producto()%>">
-                <input type="hidden" name="nombre_producto" value="<%=producto.getNombre_producto()%>">
-                <input type="hidden" name="precio" value="<%=producto.getPrecio()%>">
-                <input type="hidden" name="descripcion" value="<%=producto.getDescripcion()%>">
-                <div class="button-container">
-                    <button type="submit">Agregar al carrito</button>
-                </div>
-            </form>
-        </div>
-        <%
-                }
-            }
-        %>
+
 
     </section>
 

@@ -34,6 +34,13 @@
             <li class="login"><a href="<%= request.getContextPath()%>/jsp-admin/inicio-admin.jsp">Administrar</a></li>
             <% }%>
             <li class="login"><a href="<%= request.getContextPath()%>/jsp-usuario/panel-usuario.jsp">Bienvenido <%= username %> </a></li>
+
+            <li class="login">
+                <a href="<%= request.getContextPath() %>/jsp-productos/carrito.jsp">
+                    <img class = "logo" src="<%= request.getContextPath() %>/assets/carrito.svg" alt="Carrito">
+                </a>
+            </li>
+
             <li class="login"><a href="./SvLogout">Cerrar sesion</a></li>
             <% } else { %>
             <li class="login"><a href="<%= request.getContextPath()%>/jsp/login.jsp">Iniciar sesion</a></li>
