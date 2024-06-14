@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
     <meta name ="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
+    <title>Playeras deportivas</title>
     <link rel = "stylesheet" href="<%= request.getContextPath()%>/css/styles.css">
     <link rel = "stylesheet" href="<%= request.getContextPath()%>/css/productos.css">
     <link rel = "icon" type="image/x-icon" href="<%= request.getContextPath()%>/assets/subliart.svg">
@@ -55,7 +55,7 @@
         <ul class="lista">
             <li><a href="<%= request.getContextPath()%>/jsp-productos/productos.jsp">Playeras</a> </li>
             <li><a class = "active" href="<%= request.getContextPath()%>/jsp-productos/playeras-deportivas.jsp">Playeras deportivas</a> </li>
-            <li><a href="<%= request.getContextPath()%>/jsp-productos/playeras-oversize.jsp">Playeras oversize</a></li>
+            <li><a href="<%= request.getContextPath()%>/jsp-productos/playeras-oversize.jsp">Playeras oversize personalizadas</a></li>
         </ul>
 
 

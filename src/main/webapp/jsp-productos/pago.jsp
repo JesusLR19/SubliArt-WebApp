@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
     <meta name ="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pago</title>
+    <title>Carrito</title>
     <link rel = "stylesheet" href="<%= request.getContextPath()%>/css/styles.css">
     <link rel = "stylesheet" href="<%= request.getContextPath()%>/css/productos.css">
     <link rel = "stylesheet" href="<%= request.getContextPath()%>/css/tablas.css">

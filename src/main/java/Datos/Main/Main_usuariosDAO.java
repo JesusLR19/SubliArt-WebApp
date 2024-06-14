@@ -13,12 +13,12 @@ public class Main_usuariosDAO {
 //        }
         usuarios usu = new usuarios();
         //usuarioDAO.agregarAdmin(usu);
-//        usuarioDAO.cambiarPassword(1,"12345");
+        usuarioDAO.cambiarPassword(2,"12345");
 //        String username = "jesuslr";
 //        String password = "12345";
 //        usuarioDAO.verificarUsuario(username,password);
-        usu = usuarioDAO.identificarID(1);
-        System.out.printf(usu.getUsername());
+//        usu = usuarioDAO.identificarID(1);
+//        System.out.printf(usu.getUsername());
         //usu = usuarioDAO.identificarNombre("ichuchex");
         //System.out.println(usu.getNombre());
 
