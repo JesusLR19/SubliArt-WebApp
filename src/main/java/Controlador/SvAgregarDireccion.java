@@ -1,7 +1,8 @@
 package Controlador;
+
 import Datos.contactoDAO;
-import Modelo.contacto;
 import Datos.usuariosDAO;
+import Modelo.contacto;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

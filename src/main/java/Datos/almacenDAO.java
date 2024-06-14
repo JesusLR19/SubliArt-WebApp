@@ -1,8 +1,12 @@
 package Datos;
+
 import Modelo.almacen;
-import java.sql.*;
-import java.util.List;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.List;
 public class almacenDAO {
 
     public List<almacen> listar(){

@@ -1,5 +1,7 @@
 package Controlador;
 
+import Modelo.vistaProductos;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,7 +11,6 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import Modelo.vistaProductos;
 
 @WebServlet(name ="SvAgregarCarrito" , value = "/SvAgregarCarrito")
 public class SvAgregarCarrito extends HttpServlet {

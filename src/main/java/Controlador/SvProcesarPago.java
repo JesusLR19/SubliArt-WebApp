@@ -1,6 +1,10 @@
 package Controlador;
 
+import Datos.pedidosDAO;
+import Datos.usuariosDAO;
+import Modelo.pedidos;
 import Modelo.vistaProductos;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,9 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
-import Modelo.pedidos;
-import Datos.pedidosDAO;
-import Datos.usuariosDAO;
 
 @WebServlet(name = "SvProcesarPago", value = "/SvProcesarPago")
 public class SvProcesarPago extends HttpServlet {

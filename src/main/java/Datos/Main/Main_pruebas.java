@@ -1,11 +1,7 @@
 package Datos.Main;
-import Datos.pedidosDAO;
-import Modelo.contacto;
-import Datos.contactoDAO;
-import Datos.usuariosDAO;
-import Modelo.pedidos;
 
-import java.util.List;
+import Datos.pedidosDAO;
+import Modelo.pedidos;
 
 
 public class Main_pruebas {

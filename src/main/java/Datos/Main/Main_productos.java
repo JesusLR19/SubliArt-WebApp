@@ -1,19 +1,5 @@
 package Datos.Main;
-import Datos.descripcionDAO;
-import Datos.productosDAO;
-import Modelo.descripcion_producto;
-import Modelo.productos;
-import Modelo.usuarios;
-import java.util.List;
-import Datos.almacenDAO;
-import Modelo.almacen;
-import Datos.categoriaDAO;
-import Modelo.categoria_producto;
-import Modelo.vistaProductos;
-import Datos.vistaProductosDAO;
-import Modelo.pedidos;
-import Datos.pedidosDAO;
-import Modelo.contacto;
+
 import Datos.contactoDAO;
 
 public class Main_productos {

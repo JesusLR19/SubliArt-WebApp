@@ -1,8 +1,12 @@
 package Datos;
-import java.sql.*;
-import javax.sql.DataSource;
 
 import org.apache.commons.dbcp2.BasicDataSource;
+
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 public class Conexion {
     private static String user = "postgres";
     private static String password = "211910"; //colocar la contraseña que tenga en su sgbd

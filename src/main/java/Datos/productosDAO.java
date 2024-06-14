@@ -1,6 +1,6 @@
 package Datos;
+
 import Modelo.productos;
-import Modelo.usuarios;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,13 +1,15 @@
 package Controlador;
-import java.io.IOException;
+
+import Datos.productosDAO;
+import Modelo.productos;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Datos.productosDAO;
-import Modelo.productos;
+import java.io.IOException;
 
 @WebServlet (name ="SvAddProducto" , value = "/SvAddProducto")
 public class SvAddProducto extends HttpServlet {
