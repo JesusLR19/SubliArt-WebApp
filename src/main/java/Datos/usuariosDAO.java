@@ -325,6 +325,10 @@ public class usuariosDAO {
             }
         }catch (Exception e){
             e.printStackTrace();
+        }finally{
+            Conexion.close(rs);
+            Conexion.close(ps);
+            Conexion.close(conn);
         }
         return id_rol;
     }
@@ -352,6 +356,10 @@ public class usuariosDAO {
             }
         }catch (Exception e){
             e.printStackTrace();
+        }finally {
+            Conexion.close(rs);
+            Conexion.close(ps);
+            Conexion.close(conn);
         }
         return id_usuario;
     }

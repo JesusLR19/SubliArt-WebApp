@@ -123,7 +123,7 @@
 </div>
 
 <footer>
-    <h2>Footer</h2>
+    <h2></h2>
 </footer>
 
 </body>
